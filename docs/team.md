@@ -6,11 +6,11 @@ title:  Team
 # {{ page.title }}
 
 
-## USER 1
+## Devon Kenneally
 ***UCI Net ID***: ucinetid
 
-## USER 2
+## Edison Weik
 ***UCI Net ID***: ucinetid
 
-## USER 3
-***UCI Net ID***: ucinetid
+## Julia Medina-Morin
+***UCI Net ID***: 71239698
