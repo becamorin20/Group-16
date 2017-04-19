@@ -7,10 +7,10 @@ title:  Team
 
 
 ## Devon Kenneally
-***UCI Net ID***: ucinetid
+***UCI Net ID***: dkenneal
 
 ## Edison Weik
-***UCI Net ID***: ucinetid
+***UCI Net ID***: eweik
 
 ## Julia Medina-Morin
-***UCI Net ID***: 71239698
+***UCI Net ID***: jmedinam
