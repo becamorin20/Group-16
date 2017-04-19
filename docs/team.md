@@ -3,7 +3,7 @@ layout: default
 title:  Team
 ---
 
-# {{ page.title }}
+# Group-16 Members
 
 
 ## Devon Kenneally
