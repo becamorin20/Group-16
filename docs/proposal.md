@@ -4,14 +4,19 @@ title: Proposal
 ---
 
 # testing
-# Members
+# this is where the proposal will go...
+
+# SUMMARY
+#
+#
 
 
-## Devon Kenneally
-***UCI Net ID***: dkenneal
+# AI/ML ALGORITHMS 
+#
+#
 
-## Edison Weik
-***UCI Net ID***: eweik
 
-## Julia Medina-Morin
-***UCI Net ID***: jmedinam
+# EVALUATION PLAN 
+#
+#
+
