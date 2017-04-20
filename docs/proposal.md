@@ -8,7 +8,7 @@ title: Proposal
 # 
 # SUMMARY 
 # 
-# this is where the proposal will go...
+### this is where the proposal will go...
 # mention the main idea behind your project. At least have a sentence the clearly explaind the input/put 
 # semantics of your project 
 #
