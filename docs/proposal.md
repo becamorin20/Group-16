@@ -4,7 +4,7 @@ title: Proposal
 ---
 ## Summary  
 ##### In this project, we will train our agent (in the video game Minecraft) to learn how to survive as long as possible in it's world. We plan on implementing reinforcement learning for this project. The main objectives would be for the agent to be able to find and collect all the essential materials needed to survive such as food (and learn how to kill for meat) and tools (to be able to protect itself). It should also be able to learn how to navigate in the terrain it is in, such as how to climb mountains/hills, how to swim, and how to go around/ get over obtacles (e.g. trees). At the same time, it will have to learn how to defend itself from zombie attacks (and possibly animal attacks). 
-##### Information we expect to use as input include the state/environment, whether it is position in the space, velocity, type of ground we're standing on, available tools, available resources, etc (we haven't figured that out exaclty yet all the possible variables). We expect this to produce as output a state, action pair, ultimately resulting in a new state for which we use as the next input. 
+##### Information we expect to use as input include the state/environment, whether it is position in the space, velocity, type of ground we're standing on, available tools, available resources, etc (we haven't figured that out exactly yet all the possible variables). We expect this to produce as output a (state, action) pair, ultimately resulting in an action taken and a new state for which we use as the next input. 
 ##### Applications could include robotics and how they navigate their environments safely. Examples range from something as simple as trash collectors to something like complex like the Mars rover.
 
 ## AI/ML Algorithms 
