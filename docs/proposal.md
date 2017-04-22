@@ -8,7 +8,7 @@ title: Proposal
 ##### Applications could include robotics and how they navigate their environments safely. Examples range from something as simple as trash collectors to something like complex like the Mars rover.
 
 ## AI/ML Algorithms 
-##### We plan on using reinforcement learning with Q-Learning on the agent to train it to maximize it future rewards. Perhaps extending or utilizing to a functional approximation version should our state space become too large.
+##### We plan on using reinforcement learning with Q-Learning on the agent to train it to maximize it future rewards. Perhaps extending to or utilizing a functional approximation version should our state space become too large.
 
 ## Evaluation Plans 
 ##### Quantitatively, some metrics to evaluate our agent will be: time it has stayed alive (before time runs out), average Q-value, rewards (point/s) obtained from episodes, performance navigating the environment, number of kills (zombies), material collected. For our baseline we will give the agent a time limit (eg 5 minutes) to collect its performance and improvements. We expect to evaluate our data in a similar manner that we train it - via Minecraft simulations.
