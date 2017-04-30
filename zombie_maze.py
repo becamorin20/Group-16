@@ -17,7 +17,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 # ------------------------------------------------------------------------------------------------
 
-# Tutorial sample #2: Run simple mission using raw XML
+# Sample Code for 10x10 Maze with Zombie
 
 import MalmoPython
 import os
