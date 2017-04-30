@@ -69,7 +69,6 @@ missionXML='''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
                     <DrawCuboid x1="1" y1="207" z1="1" x2="5" y2="207" z2="1" type="stone"/>
                     <DrawEntity x="0.5" y="207" z="0.5" type="Zombie"/>
                     <DrawEntity x="9" y="207" z="9" type="Zombie"/>
-                    <DrawBlock x="1" y="207" z="9" type="mob_spawner" variant="Zombie"/>
                   </DrawingDecorator>
                   
                   <ServerQuitFromTimeUp timeLimitMs="60000"/>
