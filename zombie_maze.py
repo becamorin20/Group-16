@@ -3,7 +3,7 @@
 # The mission in this code only lasts for 60 sec. But the zombies seem to die randomly without spawning after 15 sec. 
 # I'm having trouble getting the zombies to live longer and for them to spawn. 
 # Right now the walls of the maze are only 1 block tall - this is to allow me to edit and visualize the space easily from within the
-# game. But obviously when we start the learning I would the walls taller to prevent the zombies from easily jumping them.
+# game. But obviously when we start the learning I would make the walls taller to prevent the zombies from easily jumping over them.
 #
 #
 
