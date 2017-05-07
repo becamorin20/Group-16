@@ -6,13 +6,18 @@
 # game. But obviously when we start the learning I would make the walls taller to prevent the zombies from easily jumping over them.
 #
 #
+# the reason why the zombies were catching on fire and dieing after 60 seconds was because they can't survive in the daylight...
+# so I made the time of the day be midnight
 
 
 
 import MalmoPython
 import os
+import random
 import sys
 import time
+import json
+import errno
 
 sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
 
@@ -27,22 +32,27 @@ sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immedi
 #   <DrawEntity x="9" y="207" z="9" type="Zombie"/>
 # </DrawingDecorator>
 
-missionXML='''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+missionXML = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
             <Mission xmlns="http://ProjectMalmo.microsoft.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-            
+
               <About>
                 <Summary>Hello world!</Summary>
               </About>
-              
+              <ModSettings>
+             <MsPerTick> 40 </MsPerTick>
+             </ModSettings>
+
               <ServerSection>
                 <ServerInitialConditions>
                   <Time>
-                    <StartTime>10000</StartTime>
+                    <StartTime>18000</StartTime>
                     <AllowPassageOfTime>false</AllowPassageOfTime>
                   </Time>
                   <Weather>clear</Weather>
                   <AllowSpawning>true</AllowSpawning>
                 </ServerInitialConditions>
+
                 <ServerHandlers>
                   <FlatWorldGenerator generatorString="3;7,220*1,5*3,2;3;,biome_1"/>
                   <DrawingDecorator>
@@ -65,13 +75,18 @@ missionXML='''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
                   <ServerQuitWhenAnyAgentFinishes/>
                 </ServerHandlers>
               </ServerSection>
-              
+
               <AgentSection mode="Survival">
                 <Name>Bill Buttlicker</Name>
                 <AgentStart>
                     <Placement x="5" y="207.0" z="5" />
                 </AgentStart>
                 <AgentHandlers>
+                    <ContinuousMovementCommands turnSpeedDegs="840">
+                      <ModifierList type="deny-list"> <!-- Example deny-list: prevent agent from strafing -->
+                          <command>strafe</command>
+                      </ModifierList>
+                  </ContinuousMovementCommands>
                   <ObservationFromFullStats/>
                   <DiscreteMovementCommands/>
                   <RewardForMissionEnd rewardForDeath="-1000">
@@ -80,11 +95,38 @@ missionXML='''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
                   <RewardForSendingCommand reward="1"/>
                 </AgentHandlers>
               </AgentSection>
+
             </Mission>'''
+
+def load_grid(world_state):
+    """
+    Used the agent observation API to get a 21 X 21 grid box around the agent (the agent is in the middle).
+
+    Args
+        world_state:    <object>    current agent world state
+
+    Returns
+        grid:   <list>  the world grid blocks represented as a list of blocks (see Tutorial.pdf)
+    """
+    while world_state.is_mission_running:
+        # sys.stdout.write(".")
+        time.sleep(0.1)
+        world_state = agent_host.getWorldState()
+        if len(world_state.errors) > 0:
+            raise AssertionError('Could not load grid.')
+
+        if world_state.number_of_observations_since_last_state > 0:
+            msg = world_state.observations[-1].text
+            observations = json.loads(msg)
+            grid = observations.get(u'floorAll', 0)
+            break
+    return grid
 
 # Create default Malmo objects:
 
 agent_host = MalmoPython.AgentHost()
+agent_host.addOptionalIntArgument( "speed,s", "Length of tick, in ms.", 50)
+
 try:
     agent_host.parse( sys.argv )
 except RuntimeError as e:
@@ -102,7 +144,7 @@ my_mission_record = MalmoPython.MissionRecordSpec()
 max_retries = 3
 for retry in range(max_retries):
     try:
-        agent_host.startMission( my_mission, my_mission_record )
+        agent_host.startMission(my_mission, my_mission_record )
         break
     except RuntimeError as e:
         if retry == max_retries - 1:
@@ -124,6 +166,8 @@ while not world_state.has_mission_begun:
 print
 print "Mission running ",
 
+grid = load_grid(world_state)
+
 # Loop until mission ends:
 while world_state.is_mission_running:
     sys.stdout.write(".")
@@ -134,4 +178,5 @@ while world_state.is_mission_running:
 
 print
 print "Mission ended"
+
 # Mission has ended.
