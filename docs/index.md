@@ -3,7 +3,7 @@ layout: default
 title:  Home
 ---
 
-_Add your text here_
+# GROUP NAME?
 
 
 What's Markdown (`.md`)?
