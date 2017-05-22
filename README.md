@@ -1,4 +1,4 @@
-# Group-16
+# Hungry Friends
 CS 175
 
 
