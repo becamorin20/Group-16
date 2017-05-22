@@ -6,13 +6,13 @@ title: Status
 # (GROUP NAME?) PROJECT STATUS - 5/26/2016
 
 ## PROJECT SUMMARY
-project summary
+(project summary)
 
 ## APPROACH
-approach
+(approach)
 
 ## EVALUATION
-evaluation
+(evaluation)
 
 ## REMAINING GOALS AND CHALLENGES
-remaining goals and challenges
+(remaining goals and challenges)
