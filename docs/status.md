@@ -13,9 +13,13 @@ Figure 1: Picture of 10x10 maze environment for Malmo-Minecraft agent. Black spo
 ## APPROACH
 We are using reinforcement learning to learn how to survive in the maze, specifically, we attempt to learn a Q-function to approximate a Q-table. 
 
-In this environment, we start off with 10x10 = 100 grid positions, 4 possible discrete actions (movenorth 1, movesouth 1, movewest 1, moveeast 1), and 4 total entities. 
+We first describe our Markov Decision Process (MDP).
+
+Our reward function is -1000 for death. 
+
+For our states and actions, we start off with 10x10 = 100 grid positions, 4 possible discrete actions (movenorth 1, movesouth 1, movewest 1, moveeast 1), and 4 total entities. 
 Using a Q-table, we would have to keep track of possibly 4 x 100<sup>4</sup> possible state-action pairs (4 for each action and 100x100x100x100 for each possible position of each entity). 
-This is too large a number for us to expect to keep track of, so we approximate this table with a list of 72 parameters 
+This is too large a number for us to expect to keep track of, so we approximate our state-action pairs with a list of 72 parameters 
 <div align="center"><img src="https://github.com/becamorin20/Group-16/blob/master/docs/images/theta_list.png" width="250"></div>
 
 To represent the state in our approximation, we use 72 basis functions as features:
@@ -23,7 +27,7 @@ To represent the state in our approximation, we use 72 basis functions as featur
 
 More precisely, we represent our state by breaking it down into 18 partitions: 9 dynamic partitions that move with the agent so that the agent is always at the center of this sub-space, and 9 stationary partitions that allow the agent to know which region of the environment the agent is in.
 We are currently experimenting with a couple different stationary sets of partitions.
-This is all visualized as followed in the figures below, along with reasoning for them at the bottom:
+This is all visualized as followed in the figures below, along with descriptions for them:
 <div align="center"><img src="https://github.com/becamorin20/Group-16/blob/master/docs/images/basis_dynamic.png" width="350"></div>
 Figure 2: Picture of 9 dynamic partitions as basis functions. Green spot indicates position of agent. Red spots indicate position of zombies.
 The basis function for each partiton returns an integer indicating how many zombies are in that particular partition. 
@@ -61,7 +65,11 @@ Based off the "coarse" basis function from Sutton and Barto's _Reinforcement Lea
 The basis function for each partiton returns an 1 if the agent is in it, 0 otherwise.
 They do not keep track of zombie positions.
 
+.
 
+For each of our 4 actions we allow a set of 18 basis functions, thus giving us 72 total basis functions and 72 total parameters.
+
+So our MDP consists of reward function of -1000 for death and these 72 basis functions and parameters.
 ## EVALUATION
 (evaluation)
 
