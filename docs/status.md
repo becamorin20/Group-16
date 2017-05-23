@@ -13,7 +13,8 @@ Figure 1: Picture of 10x10 maze environment for Malmo-Minecraft agent. Black spo
 ## APPROACH
 We are using reinforcement learning to learn how to survive in the maze, specifically, we attempt to learn a Q-function to approximate a Q-table. 
 
-We first describe our Markov Decision Process (MDP).
+### Markov Decison Process (MDP)
+We first describe our Markov Decision Process.
 
 Our reward function is -1000 for death. 
 
