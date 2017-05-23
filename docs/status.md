@@ -22,7 +22,8 @@ To represent the state in our approximation, we use 72 basis functions as featur
 <div align="center"><img src="https://github.com/becamorin20/Group-16/blob/master/docs/images/basis_functions.png" width="600"></div>
 
 More precisely, we represent our state by breaking it down into 18 partitions: 9 dynamic partitions that move with the agent so that the agent is always at the center of this sub-space, and 9 stationary partitions that allow the agent to know which region of the environment the agent is in.
-This is visualized as followed in the figures below, along with reasoning for them at the bottom:
+We are currently experimenting with a couple different stationary sets of partitions.
+This is all visualized as followed in the figures below, along with reasoning for them at the bottom:
 <div align="center"><img src="https://github.com/becamorin20/Group-16/blob/master/docs/images/basis_dynamic.png" width="350"></div>
 Figure 2: Picture of 9 dynamic partitions as basis functions. Green spot indicates position of agent. Red spots indicate position of zombies.
 The basis function for each partiton returns an integer indicating how many zombies are in that particular partition. 
