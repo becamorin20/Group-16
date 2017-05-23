@@ -71,6 +71,11 @@ They do not keep track of zombie positions.
 For each of our 4 actions we allow a set of 18 basis functions, thus giving us 72 total basis functions and 72 total parameters.
 
 So our MDP consists of reward function of -1000 for death and these 72 basis functions and parameters.
+
+### Algorithm
+We now describe the algorithm we use to learn the parameters for the above function approximation.
+
+
 ## EVALUATION
 (evaluation)
 
