@@ -74,8 +74,8 @@ So our MDP consists of reward function of -1000 for death and these 72 basis fun
 
 ### Algorithm
 We now describe the algorithm we use to learn the parameters for the above function approximation.
-<div align="center"><img src="https://github.com/becamorin20/Group-16/blob/master/docs/images/algorithm.png" width="350"></div>
-Figure 6: An online linear, gradient descent algorithm for approximatin Q(s,a). 
+<div align="center"><img src="https://github.com/becamorin20/Group-16/blob/master/docs/images/algorithm.png" width="500"></div>
+Figure 6: An online linear, gradient descent algorithm for approximating Q(s,a). 
 
 ## EVALUATION
 (evaluation)
