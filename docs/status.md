@@ -78,7 +78,9 @@ We now describe the algorithm we use to learn the parameters for the above funct
 Figure 6: An online linear, gradient descent algorithm TD(lambda) for approximating Q(s,a). 
 
 ## EVALUATION
-(evaluation)
+We now describe our evaluation process for our project. 
+We break this evaluation into two main parts - with a maze and without a maze. 
+Within these two parts, we elaborate on the performance of a baseline, non-intelligent agent and an intelligent agent with different basis functions.
 
 ### No Maze
 
