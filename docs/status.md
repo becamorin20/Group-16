@@ -19,7 +19,7 @@ This is too large a number for us to expect to keep track of, so we approximate 
 <div align="center"><img src="https://github.com/becamorin20/Group-16/blob/master/docs/images/theta_list.png" width="250"></div>.
 
 To represent the state in our approximation, we use 72 basis functions as features:
-<div align="center"><img src="https://github.com/becamorin20/Group-16/blob/master/docs/images/phi_list.png" width="250"></div>.
+<div align="center"><img src="https://github.com/becamorin20/Group-16/blob/master/docs/images/basis_functions.png" width="250"></div>.
 
 ## EVALUATION
 (evaluation)
