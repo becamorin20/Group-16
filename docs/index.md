@@ -3,7 +3,13 @@ layout: default
 title:  Home
 ---
 
-# GROUP NAME?
+# GROUP NAME?'
+
+(Link to Status Report)
+
+(Link to Video)
+
+(Link to Source Code)
 
 
 What's Markdown (`.md`)?
