@@ -29,6 +29,7 @@ The basis function for each partiton returns an integer indicating how many zomb
 Possible integers include: 0,1,2,3.
 
 
+
 <div align="center"><img src="https://github.com/becamorin20/Group-16/blob/master/docs/images/basis_dynamic2.png" width="350"></div>
 Figure 3: Picture of 9 dynamic partitions as basis functions. Green spot indicates position of agent. 
 The partitions move with the agent so that the agent is always at its center.  
