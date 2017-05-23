@@ -59,7 +59,7 @@ They do not keep track of zombie positions.
 .
 
 <div align="center"><img src="https://github.com/becamorin20/Group-16/blob/master/docs/images/basis_stationary2.png" width="350"></div>
-Figure 4: Picture of 9 stationary partitions as basis functions. 
+Figure 5: Picture of 9 stationary partitions as basis functions. 
 These partitions never move.
 These circular partitions have radius 2.50 unit blocks.  
 Based off the "coarse" basis function from Sutton and Barto's _Reinforcement Learning: An Introduction_.
@@ -74,7 +74,8 @@ So our MDP consists of reward function of -1000 for death and these 72 basis fun
 
 ### Algorithm
 We now describe the algorithm we use to learn the parameters for the above function approximation.
-
+<div align="center"><img src="https://github.com/becamorin20/Group-16/blob/master/docs/images/algorithm.png" width="350"></div>
+Figure 6: An online linear, gradient descent algorithm for approximatin Q(s,a). 
 
 ## EVALUATION
 (evaluation)
