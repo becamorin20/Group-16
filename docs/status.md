@@ -18,7 +18,6 @@ Using a Q-table, we would have to keep track of possibly 4 x 100<sup>4</sup> pos
 This is too large a number for us to expect to keep track of, so we approximate this table with a list of parameters 
 $x^2$.
 
-$$ \theta $$
 ## EVALUATION
 (evaluation)
 
