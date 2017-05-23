@@ -66,7 +66,7 @@ Based off the "coarse" basis function from Sutton and Barto's _Reinforcement Lea
 The basis function for each partiton returns an 1 if the agent is in it, 0 otherwise.
 They do not keep track of zombie positions.
 
-.
+---------------------------------------------------------------------------------------------------------------------------------------
 
 For each of our 4 actions we allow a set of 18 basis functions, thus giving us 72 total basis functions and 72 total parameters.
 
