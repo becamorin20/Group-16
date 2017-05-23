@@ -80,19 +80,38 @@ Figure 6: An online linear, gradient descent algorithm TD(lambda) for approximat
 ## EVALUATION
 (evaluation)
 
-### Baseline - Random
+### No Maze
+
+#### Baseline - Random
 (baseline random)
 
-### Baseline - Handcode
+#### Baseline - Handcode
 (baseline handcode)
 
-### Learner - 9 Dynamic BFs + 9 Tile Stationary BFs
+#### Learner - 9 Dynamic BFs + 9 Tile Stationary BFs
 (description)
 
-### Learner - 9 Dynamic BFs + 9 Coarse Stationary BFs
+#### Learner - 9 Dynamic BFs + 9 Coarse Stationary BFs
 (description)
 
-### Learner - 9 Dynamic BFs 
+#### Learner - 9 Dynamic BFs 
+(description)
+
+### Maze
+
+#### Baseline - Random
+(baseline random)
+
+#### Baseline - Handcode
+(baseline handcode)
+
+#### Learner - 9 Dynamic BFs + 9 Tile Stationary BFs
+(description)
+
+#### Learner - 9 Dynamic BFs + 9 Coarse Stationary BFs
+(description)
+
+#### Learner - 9 Dynamic BFs 
 (description)
 
 
