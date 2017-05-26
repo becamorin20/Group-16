@@ -118,7 +118,8 @@ The agent shows no improvement and stays alive for about 22-23 commands per epis
 
 
 #### Learner - 9 Dynamic BFs + 9 Tile Stationary BFs
-(description)
+The first "intelligent" agent we evaluate is an agent using the Q-learning algorithm (figure 6) with 9 dynamic basis functions (figure 2) and 9 tile stationary basis functions (figure 4).
+
 
 #### Learner - 9 Dynamic BFs + 9 Coarse Stationary BFs
 (description)
