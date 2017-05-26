@@ -167,6 +167,8 @@ The agent shows regressing performance and manages to stay alive for only ~14-15
 
 
 ### Maze
+We now evaluate our agent in a maze.
+See figure 1 for the exact representation of the maze. 
 
 #### Baseline - Random
 (baseline random)
