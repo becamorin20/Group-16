@@ -96,7 +96,7 @@ Red sports indicate starting position of zombies.
 
 #### Baseline - Random
 Our first agent consisted of completely random motions. 
-We expected to see no improvement by the random moving agent and after running the program we see that performance slightly drops.
+We expected to see no improvement by the random moving agent and after running the program we see that performance slightly declines.
 We believe this may just be noise and that running this program with more episodes would show a more constant performance.
 
 From the plots we see that the average number of commands alive each episode by the agent is approximately 23 commands.
