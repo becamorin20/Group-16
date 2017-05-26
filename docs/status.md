@@ -49,8 +49,7 @@ This allows us to keep track of the proximity of zombies to the agent.
 
 <div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/basis_stationary1.png" width="350"></div>
 Figure 4: Picture of 9 stationary partitions as basis functions. 
-These partitions never move.  
-Based off the "tile" basis functions from Sutton and Barto's _Reinforcement Learning: An Introduction_ .
+These partitions never move. Based off the "tile" basis functions from Sutton and Barto's _Reinforcement Learning: An Introduction_ .
 The basis function for each partiton returns an 1 if the agent is in it, 0 otherwise.
 They do not keep track of zombie positions.
 
@@ -61,8 +60,7 @@ They do not keep track of zombie positions.
 <div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/basis_stationary2.png" width="350"></div>
 Figure 5: Picture of 9 stationary partitions as basis functions. 
 These partitions never move.
-These circular partitions have radius 2.50 unit blocks.  
-Based off the "coarse" basis function from Sutton and Barto's _Reinforcement Learning: An Introduction_ .
+These circular partitions have radius 2.50 unit blocks. Based off the "coarse" basis function from Sutton and Barto's _Reinforcement Learning: An Introduction_ .
 The basis function for each partiton returns an 1 if the agent is in it, 0 otherwise.
 They do not keep track of zombie positions.
 
