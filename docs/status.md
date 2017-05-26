@@ -123,7 +123,7 @@ The first "intelligent" agent we evaluate is an agent using the Q-learning algor
 We expected to see improvement in this agent and hoped to see it meet or exceed the performance of the two baselines.
 From the plots, we see that performance did improve marginally as time continues, but the performance never caught up to that of the handcoded or random agent.
 
-The agent stayed alive for ~15-16 commands per episode
+The agent stayed alive for ~15-16 commands per episode.
 The results can be seen in the figure below:
 <div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze-tile-100.png" width="400"></div>
 Figure 10: Scatter plot with linear fit of Q-learner with tile stationary BFs in no maze environment.
