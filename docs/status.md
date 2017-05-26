@@ -81,13 +81,25 @@ Figure 6: An online linear, gradient descent algorithm TD(lambda) for approximat
 We now describe our evaluation process for our project. 
 We break this evaluation into two main parts - with a maze and without a maze. 
 Within these two parts, we elaborate on the performance of a baseline, non-intelligent agent and an intelligent agent with different basis functions.
+All of our individual evaluations are trained on 100 iterations/episodes.
+We did this because of time constraints with the deadline, but plan on expanding this number later.
 
 ### No Maze
+To start our evaluation, we set our agent in a grid environment without a maze.
+<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze.png" width="450"></div>
+Figure 7: 10x10 maze environment without a maze. 
+Green spots indicate starting position of agent. 
+Red sports indicate starting position of zombies.
 
 #### Baseline - Random
-(baseline random)
+Our first evaluation consisted of completely random motions by the agent. 
+We expected to see no improvement by the random moving agent as time progresses and after running the program that's what we get.
+The results can be seen in the figure below:
+<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no_maze_random_100.pdf" width="400"></div>
+Figure 8: Scatter plot of random agent performance in no maze environment with linear fit. 
+We see no improvement in this plot as time continues.
 
-#### Baseline - Handcode
+#### Baseline - Handcode (Mob Fun Algorithm)
 (baseline handcode)
 
 #### Learner - 9 Dynamic BFs + 9 Tile Stationary BFs
@@ -104,7 +116,7 @@ Within these two parts, we elaborate on the performance of a baseline, non-intel
 #### Baseline - Random
 (baseline random)
 
-#### Baseline - Handcode
+#### Baseline - Handcode (Mob Fun Algorithm)
 (baseline handcode)
 
 #### Learner - 9 Dynamic BFs + 9 Tile Stationary BFs
