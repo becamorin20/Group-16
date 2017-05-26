@@ -1,4 +1,4 @@
-# (Group Name?)
+# Zombie-Maze-Land
 CS 175
 
 
