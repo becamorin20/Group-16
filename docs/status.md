@@ -172,6 +172,10 @@ See figure 1 for the exact representation of the maze.
 #### Baseline - Random
 The first baseline with a maze is a randomly moving agent. 
 
+The results can be seen in the figure below:
+<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/maze-random-100.png" width="400"></div>
+Figure 13: Scatter plot with linear fit of random agent in maze environment. The agents performs near a constant 80-70 commands per episode.
+
 #### Baseline - Handcode (Mob Fun Algorithm)
 The second baseline with a maze is an agent moving according to the mob_fun.py algorithm.
 
@@ -181,7 +185,7 @@ The first "intelligent" agent we evaluate is one trained with 9 dynamic BFs (fig
 This agent showed little to no improvement over the course of training. Based on this agents performance in the no-maze model, we expected something similar to what we saw.
 The results can be seen in the figure below:
 <div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/maze-q-tile-100.png" width="400"></div>
-Figure 15: Scatter plot with linear fit of Q-learner with 9 dynamic BFs and 9 stationary tile BFs. The shows marginal improvement during training.
+Figure 15: Scatter plot with linear fit of Q-learner with 9 dynamic BFs and 9 stationary tile BFs. The plot shows marginal improvement during training.
 
 
 #### Learner - 9 Dynamic BFs + 9 Coarse Stationary BFs (as seen in video)
