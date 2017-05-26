@@ -3,7 +3,7 @@ layout: default
 title: Status
 ---
 
-# Zombie-Maze-Land PROJECT STATUS - 5/26/2016
+# Zombie-Maze-Land PROJECT STATUS - 5/26/2017
 
 ## PROJECT SUMMARY
 The goal of this project is to survive for as long as possible in a 10x10 block environment with a maze and three zombies placed somewhere in the maze. The agent starts off in the middle of this environment. The zombies are placed at three pre-chosen spots. The agent must survive for as long as possible. See figure below for visualization:
@@ -144,7 +144,8 @@ Figure 11: Scatter plot with linear fit of Q-learner with coarse stationary BFs 
 The agents does improvement and manages to stay alive for ~20-21 commands per episode by the end of training.
 
 #### Learner - 9 Dynamic BFs 
-(description)
+The final "intelligent" agent we evaluate is an agent using the Q-learning algorithm (figure 6) with 9 dynamic basis functions (figure 2) and 0 stationary BFs.
+
 
 ### Maze
 
