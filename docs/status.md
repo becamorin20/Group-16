@@ -95,7 +95,7 @@ Red sports indicate starting position of zombies.
 Our first evaluation consisted of completely random motions by the agent. 
 We expected to see no improvement by the random moving agent as time progresses and after running the program that's what we get.
 The results can be seen in the figure below:
-<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no_maze_random_100.pdf" width="400"></div>
+[embed]"https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no_maze_random_100.pdf"[embed]
 Figure 8: Scatter plot of random agent performance in no maze environment with linear fit. 
 We see no improvement in this plot as time continues.
 
