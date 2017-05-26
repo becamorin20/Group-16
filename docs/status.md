@@ -96,7 +96,7 @@ Green spots indicate starting position of agent.
 Red sports indicate starting position of zombies.
 
 #### Baseline - Random
-Our first evaluation consisted of completely random motions by the agent. 
+Our first agent consisted of completely random motions. 
 We expected to see no improvement by the random moving agent as time progresses and after running the program we see that performance actually drops.
 We believe this may just be noise and that running this program with more episodes would show a more constant performance.
 
@@ -108,7 +108,7 @@ Figure 8: Scatter plot of random agent performance in a no maze environment with
 We see negative performance in this plot as time continues.
 
 #### Baseline - Handcode (Mob Fun Algorithm)
-The second evaluation we did was to incorporate the algorithm used in mob_fun.py from the Python_Examples folder given by Malmo. 
+The second baseline we used was the algorithm used in mob_fun.py from the Python_Examples folder given by Malmo. 
 We expected, again, to see no improvement by the agent since we are updating no parameters or Q-table and after running the program we see that (although, again, with a lot of background).
 The agent's moves are a deterministic function of its position and the relative positions of the zombies.
 
