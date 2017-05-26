@@ -96,7 +96,7 @@ Our first evaluation consisted of completely random motions by the agent.
 We expected to see no improvement by the random moving agent as time progresses and after running the program we see that performance actually drops.
 We believe this may just be noise and that running this program with more episodes would show a more constant performance.
 
-From the plots we see that the average number of commands alive each episode by the agent is approximately 16-17 commands.
+From the plots we see that the average number of commands alive each episode by the agent is approximately 23 commands.
 This will serve as a baseline to compare our "intelligent" agents with.
 The results can be seen in the figure below:
 <div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze-random-100-2.png" width="400"></div>
@@ -109,7 +109,8 @@ We expected, again, to see no improvement by the agent since we are updating no 
 The agent's moves are a deterministic function of its position and the relative positions of the zombies.
 
 From the plots we see the average performance of this agent is ~22-23 commands alive per episode.
-This is an improvement over the random moving agent, which we expect since we handcoded an actual algorithm into the agent's movements.
+This is, surprisingly, on pace with the random moving agent.
+We believe that this may be so because the random moving agent is hard to catch because it moves quickly and randomly and that perhaps the optimal amount of commands any agent can stay alive before being converged on by the zombies is ~22-23 commands.
 This will also serve as a baseline to compare to our "intelligent" agent. 
 The results can be seen in the figure below:
 <div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze-handcode.png" width="400"></div>
