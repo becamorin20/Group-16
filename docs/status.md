@@ -154,7 +154,7 @@ We again see a lot of noise present in the data.
 The final "intelligent" agent we evaluate is an agent using the Q-learning algorithm (figure 6) with 9 dynamic basis functions (figure 2) and 0 stationary BFs.
 
 This was an interesting case because here the agent would only know the relative positions of zombies.
-It would have no indication of its own position in the environment.
+It would have no knowledge of its own position in the environment.
 
 The performance of this agent was poor and actually worsened over time.
 As we see in the plots, the agent starts off with very noisy, random motions and average ~17 commands per episode before death.
@@ -179,6 +179,7 @@ The second baseline with a maze is an agent moving according to the mob_fun.py a
 #### Learner - 9 Dynamic BFs + 9 Tile Stationary BFs
 The first "intelligent" agent we evaluate is one trained with 9 dynamic BFs (figure 2) and 9 stationary tile BFs (figure 4).
 
+This agent showed little to no improvement over the course of training. 
 The results can be seen in the figure below:
 <div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/maze-q-tile-100.png" width="400"></div>
 Figure 15: Scatter plot with linear fit of Q-learner with 9 dynamic BFs and 9 stationary tile BFs. The shows marginal improvement during training.
@@ -187,12 +188,16 @@ Figure 15: Scatter plot with linear fit of Q-learner with 9 dynamic BFs and 9 st
 #### Learner - 9 Dynamic BFs + 9 Coarse Stationary BFs (as seen in video)
 The second "intelligent" agent we evaluate is one trained with 9 dynamic BFs (figure 2) and 9 stationary coarse circular BFs (figure 5).
 
+This agent showed nice improvement over training as it nearly doubled its performance. By the end of training, it was even able to surpass the performane of both baseline agents.
+
 The results can be seen in the figure below:
 <div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/maze-q-coarse-100.png" width="400"></div>
 Figure 16: Scatter plot with linear fit of Q-learner with 9 dynamic BFs and 9 stationary coarse circular BFs. The agent shows improvement and is able to go from 100 commands alive per episode to nearly 200 commands alive per episode by the end of training 100 iterations.
 
 #### Learner - 9 Dynamic BFs 
 The final "intelligent" agent we evaluate is one trained with 9 dynamic BFs (figure 2) and 0 stationary BFs.
+
+This surprisingly showed nice improvement considering this agent in the no maze environment. While it ultimately did not perform as well as the other agents, this agent did improve its performance by nearly doubling the average amount of commands alive per episode over training.
 
 The results can be seen in the figure below:
 <div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/maze-q-no-stationary-100.png" width="400"></div>
