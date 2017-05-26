@@ -7,7 +7,7 @@ title:  Home
 
 (Link to Status Report)
 
-(Link to Video)
+Link to video: https://youtu.be/LjnAuq_4ytM
 
 (Link to Source Code)
 
