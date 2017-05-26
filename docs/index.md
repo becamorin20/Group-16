@@ -17,4 +17,6 @@ Link to video: https://youtu.be/LjnAuq_4ytM
 
 Link to source code: https://github.com/becamorin20/Zombie-Maze-Land/tree/master/docs/source-code
 
+Link to team members page: https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/team.md
+
 
