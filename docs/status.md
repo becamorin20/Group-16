@@ -179,7 +179,7 @@ The second baseline with a maze is an agent moving according to the mob_fun.py a
 #### Learner - 9 Dynamic BFs + 9 Tile Stationary BFs
 The first "intelligent" agent we evaluate is one trained with 9 dynamic BFs (figure 2) and 9 stationary tile BFs (figure 4).
 
-This agent showed little to no improvement over the course of training. 
+This agent showed little to no improvement over the course of training. Based on this agents performance in the no-maze model, we expected something similar to what we saw.
 The results can be seen in the figure below:
 <div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/maze-q-tile-100.png" width="400"></div>
 Figure 15: Scatter plot with linear fit of Q-learner with 9 dynamic BFs and 9 stationary tile BFs. The shows marginal improvement during training.
@@ -197,7 +197,7 @@ Figure 16: Scatter plot with linear fit of Q-learner with 9 dynamic BFs and 9 st
 #### Learner - 9 Dynamic BFs 
 The final "intelligent" agent we evaluate is one trained with 9 dynamic BFs (figure 2) and 0 stationary BFs.
 
-This surprisingly showed nice improvement considering this agent in the no maze environment. While it ultimately did not perform as well as the other agents, this agent did improve its performance by nearly doubling the average amount of commands alive per episode over training.
+This agent, surprisingly, showed nice improvement, considering this agent's performance in the no maze environment. While it ultimately did not perform as well as the other agents, this agent did improve its performance by nearly doubling the average amount of commands alive per episode over training.
 
 The results can be seen in the figure below:
 <div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/maze-q-no-stationary-100.png" width="400"></div>
@@ -205,4 +205,10 @@ Figure 17: Scatter plot with linear fit of Q-learner with 9 dynamic BFs and 0 st
 
 
 ## REMAINING GOALS AND CHALLENGES
-(remaining goals and challenges)
+### Goals
+Over the next few weeks we hope to experiment with different types of basis functions and increase our parameter/BF set in order to represent more knowledge about the state. Currently, our model is limited in its granularity of approximating the state and in its inability recognize walls/boundaries and how they can box in the agent. We hope that adding some extra features will be able to solve these issues and improve performance.
+
+Another thing we may want to try is to add another unique baseline agent. Although this is low on our priority list.
+
+### Challenges
+Some challenge we anticipate facing as the final report due date approaches include
