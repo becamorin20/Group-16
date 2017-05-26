@@ -9,6 +9,6 @@ Link to status report: https://github.com/becamorin20/Zombie-Maze-Land/blob/mast
 
 Link to video: https://youtu.be/LjnAuq_4ytM
 
-(Link to Source Code)
+Link to source code: https://github.com/becamorin20/Zombie-Maze-Land/tree/master/docs/source-code
 
 
