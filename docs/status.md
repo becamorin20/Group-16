@@ -20,7 +20,7 @@ We first describe our Markov Decision Process.
 Our reward function is -1000 for death. 
 
 For our states and actions, we start off with 10x10 = 100 grid positions, 4 possible discrete actions (movenorth 1, movesouth 1, movewest 1, moveeast 1), and 4 total entities. 
-Using a Q-table, we would have to keep track of possibly 4 x 100<sup>4</sup> possible state-action pairs (4 for each action and 100x100x100x100 for each possible position of each entity). 
+Using a Q-table, we would have to keep track of possibly 4 x 100<sup>4</sup> possible state-action pairs (4 for each action and 100x100x100x100 for each possible permutation of positions of each entity). 
 This is too large a number for us to expect to keep track of, so we approximate our state-action pairs with a list of 72 parameters 
 <div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/theta_list.png" width="250"></div>
 
