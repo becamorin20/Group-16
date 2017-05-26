@@ -93,14 +93,29 @@ Red sports indicate starting position of zombies.
 
 #### Baseline - Random
 Our first evaluation consisted of completely random motions by the agent. 
-We expected to see no improvement by the random moving agent as time progresses and after running the program that's what we get.
+We expected to see no improvement by the random moving agent as time progresses and after running the program we see that performance actually drops.
+We believe this may just be noise and that running this program with more episodes would show a more constant performance.
+
+From the plots we see that the average number of commands alive each episode by the agent is approximately 16-17 commands.
+This will serve as a baseline to compare our "intelligent" agents with.
 The results can be seen in the figure below:
 <div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze-random-100-2.png" width="400"></div>
-Figure 8: Scatter plot of random agent performance in no maze environment with linear fit. 
-We see no improvement in this plot as time continues.
+Figure 8: Scatter plot of random agent performance in a no maze environment with linear fit. 
+We see negative performance in this plot as time continues.
 
 #### Baseline - Handcode (Mob Fun Algorithm)
-(baseline handcode)
+The second evaluation we did was to incorporate the algorithm used in mob_fun.py from the Python_Examples folder given by Malmo. 
+We expected, again, to see no improvement by the agent since we are updating no parameters or Q-table and after running the program we see that (although, again, with a lot of background).
+The agent's moves are a deterministic function of its position and the relative positions of the zombies.
+
+From the plots we see the average performance of this agent is ~22-23 commands alive per episode.
+This is an improvement over the random moving agent, which we expect since we handcoded an actual algorithm into the agent's movements.
+This will also serve as a baseline to compare to our "intelligent" agent. 
+The results can be seen in the figure below:
+<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze-handcode.png" width="400"></div>
+Figure 9: Scatter plot of handcoded agent performance in a no maze environment with linear fit.
+The agent shows no improvement and stays alive for about 22-23 commands per episode on average.
+
 
 #### Learner - 9 Dynamic BFs + 9 Tile Stationary BFs
 (description)
