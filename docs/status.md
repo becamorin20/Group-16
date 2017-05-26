@@ -126,7 +126,7 @@ We see no improvement in this plot as time continues.
 (description)
 
 #### Learner - 9 Dynamic BFs 
-(description)
+(description
 
 
 ## REMAINING GOALS AND CHALLENGES
