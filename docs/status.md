@@ -120,10 +120,26 @@ The agent shows no improvement and stays alive for about 22-23 commands per epis
 
 #### Learner - 9 Dynamic BFs + 9 Tile Stationary BFs
 The first "intelligent" agent we evaluate is an agent using the Q-learning algorithm (figure 6) with 9 dynamic basis functions (figure 2) and 9 tile stationary basis functions (figure 4).
+We expected to see improvement in this agent and hoped to see it meet or exceed the performance of the two baselines.
+From the plots, we see that performance did improve marginally as time continues, but the performance never caught up to that of the handcoded or random agent.
 
+The agent stayed alive for ~15-16 commands per episode
+The results can be seen in the figure below:
+<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze-tile-100.png" width="400"></div>
+Figure 10: Scatter plot with linear fit of Q-learner with tile stationary BFs in no maze environment.
+The agents shows marginal improvement and stays alive for ~15-16 commands per episode.
 
 #### Learner - 9 Dynamic BFs + 9 Coarse Stationary BFs
-(description)
+The second "intelligent" agent we evaluate is an agent using the Q-learning algorithm (figure 6) with 9 dynamic basis functions (figure 2) and 9 coarse stationary basis functions (figure 5).
+The performance of this agent did improve more considerably than the learner with the tile stationary BFs, but it still never caught up to the performance of the handcoded or random agent.
+We believe the improved performance of this learner over that of the tile learner can be perhaps because of the overlap in the coarse stationary BFs. 
+This can possibly give the agent a more precise indication of his/her position and allow him/her to navigate the environment better.
+
+The agent started out with about 17 commands alive per episode at the beginning of training and ended up at about 20 commands alive per episode. 
+The results can be seen in the figure below:
+<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze-coarse-100.png" width="400"></div>
+Figure 11: Scatter plot with linear fit of Q-learner with coarse stationary BFs in no maze environment.
+The agents does improvement and manages to stay alive for ~20-21 commands per episode by the end of training.
 
 #### Learner - 9 Dynamic BFs 
 (description)
