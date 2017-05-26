@@ -3,7 +3,7 @@ layout: default
 title:  Home
 ---
 
-# GROUP NAME?'
+# Zombie-Maze-Land
 
 (Link to Status Report)
 
