@@ -72,7 +72,7 @@ For each of our 4 actions we allow a set of 18 basis functions, thus giving us 7
 So our MDP consists of reward function of -1000 for death and these 72 basis functions and parameters.
 
 ### Algorithm
-We now show the algorithm we use to learn the parameters for the above function approximation. A full description of the algorithm can be found in Sutton and Barto's _Reinforcement Learning: An Introduction_ chapter 8. Some key things to note are the epsilon and alpha are monotonically decreasing functions of k that approach 0 as t approaches infinity.
+We now show the algorithm we use to learn the parameters for the above function approximation. A full description of the algorithm can be found in Sutton and Barto's _Reinforcement Learning: An Introduction_ chapter 8. One key thing to note is that epsilon and alpha are monotonically decreasing functions of k.
 <div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/algorithm3.png" width="500"></div>
 Figure 6: An online linear, gradient descent algorithm TD(lambda) for approximating Q(s,a) with eligibility tracing and an epsilon-greedy exploration.
 
