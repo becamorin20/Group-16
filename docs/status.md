@@ -97,7 +97,7 @@ Red sports indicate starting position of zombies.
 
 #### Baseline - Random
 Our first agent consisted of completely random motions. 
-We expected to see no improvement by the random moving agent as time progresses and after running the program we see that performance actually drops.
+We expected to see no improvement by the random moving agent and after running the program we see that performance actually drops.
 We believe this may just be noise and that running this program with more episodes would show a more constant performance.
 
 From the plots we see that the average number of commands alive each episode by the agent is approximately 23 commands.
@@ -105,7 +105,7 @@ This will serve as a baseline to compare our "intelligent" agents with.
 The results can be seen in the figure below:
 <div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze-random-100-2.png" width="400"></div>
 Figure 8: Scatter plot of random agent performance in a no maze environment with linear fit. 
-We see negative performance in this plot as time continues.
+We see negative performance in this plot over time.
 
 #### Baseline - Handcode (Mob Fun Algorithm)
 The second baseline we used was the algorithm used in mob_fun.py from the Python_Examples folder given by Malmo. 
@@ -156,10 +156,9 @@ The final "intelligent" agent we evaluate is an agent using the Q-learning algor
 This was an interesting case because here the agent would only know the relative positions of zombies.
 It would have no indication of its own position in the environment.
 
-The performance of this agent was poor and actually worsened as time advanced.
+The performance of this agent was poor and actually worsened over time.
 As we see in the plots, the agent starts off with very noisy, random motions and average ~17 commands per episode before death.
 But as time continues, the agents learns a set of parameters that lead it average ~14-15 commands per episode.
-We believe this is so because
 
 The results can be seen in the figure below:
 <div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze-no-stationary-100.png" width="400"></div>
