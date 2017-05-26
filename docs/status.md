@@ -189,7 +189,7 @@ The second "intelligent" agent we evaluate is one trained with 9 dynamic BFs (fi
 
 The results can be seen in the figure below:
 <div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/maze-q-coarse-100.png" width="400"></div>
-Figure 16: Scatter plot with linear fit of Q-learner with 9 dynamic BFs and 9 stationary coarse circular BFs. The agent shows improvement and is able to go from 100 commands alive per episode to 200 commands alive per episode by the end of training 100 iterations.
+Figure 16: Scatter plot with linear fit of Q-learner with 9 dynamic BFs and 9 stationary coarse circular BFs. The agent shows improvement and is able to go from 100 commands alive per episode to nearly 200 commands alive per episode by the end of training 100 iterations.
 
 #### Learner - 9 Dynamic BFs 
 The final "intelligent" agent we evaluate is one trained with 9 dynamic BFs (figure 2) and 0 stationary BFs.
