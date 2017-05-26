@@ -131,6 +131,7 @@ The agents shows marginal improvement and stays alive for ~15-16 commands per ep
 
 #### Learner - 9 Dynamic BFs + 9 Coarse Stationary BFs (as seen in video)
 The second "intelligent" agent we evaluate is an agent using the Q-learning algorithm (figure 6) with 9 dynamic basis functions (figure 2) and 9 coarse stationary basis functions (figure 5).
+
 The performance of this agent did improve more considerably than the learner with the tile stationary BFs, but it still never caught up to the performance of the handcoded or random agent.
 We believe the improved performance of this learner over that of the tile learner can be perhaps because of the overlap in the coarse stationary BFs. 
 This can possibly give the agent a more precise indication of his/her position and allow him/her to navigate the environment better.
@@ -142,6 +143,7 @@ The results can be seen in the figure below:
 <div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze-coarse-100.png" width="400"></div>
 Figure 11: Scatter plot with linear fit of Q-learner with coarse stationary BFs in no maze environment.
 The agents does improvement and manages to stay alive for ~20-21 commands per episode by the end of training.
+We again see a lot of noise present in the data.
 
 #### Learner - 9 Dynamic BFs 
 The final "intelligent" agent we evaluate is an agent using the Q-learning algorithm (figure 6) with 9 dynamic basis functions (figure 2) and 0 stationary BFs.
