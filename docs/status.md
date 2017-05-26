@@ -179,6 +179,10 @@ Figure 13: Scatter plot with linear fit of random agent in maze environment. The
 #### Baseline - Handcode (Mob Fun Algorithm)
 The second baseline with a maze is an agent moving according to the mob_fun.py algorithm.
 
+The results can be seen in the figure below:
+<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/maze-handcode-100.png" width="400"></div>
+Figure 13: Scatter plot with linear fit of agent with mob fun algorithm in maze environment. The agents performs at a constant 200 commands per episode.
+
 #### Learner - 9 Dynamic BFs + 9 Tile Stationary BFs
 The first "intelligent" agent we evaluate is one trained with 9 dynamic BFs (figure 2) and 9 stationary tile BFs (figure 4).
 
