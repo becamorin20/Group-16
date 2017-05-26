@@ -3,7 +3,7 @@ layout: default
 title: Status
 ---
 
-# (GROUP NAME?) PROJECT STATUS - 5/26/2016
+# Zombie-Maze-Land PROJECT STATUS - 5/26/2016
 
 ## PROJECT SUMMARY
 The goal of this project is to survive for as long as possible in a 10x10 block environment with a maze and three zombies placed somewhere in the maze. The agent starts off in the middle of this environment. The zombies are placed at three pre-chosen spots. The agent must survive for as long as possible. See figure below for visualization:
@@ -95,7 +95,7 @@ Red sports indicate starting position of zombies.
 Our first evaluation consisted of completely random motions by the agent. 
 We expected to see no improvement by the random moving agent as time progresses and after running the program that's what we get.
 The results can be seen in the figure below:
-<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze-random-100.png" width="400"></div>
+<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze-random-100-2.png" width="400"></div>
 Figure 8: Scatter plot of random agent performance in no maze environment with linear fit. 
 We see no improvement in this plot as time continues.
 
