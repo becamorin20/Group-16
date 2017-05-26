@@ -206,9 +206,19 @@ Figure 17: Scatter plot with linear fit of Q-learner with 9 dynamic BFs and 0 st
 
 ## REMAINING GOALS AND CHALLENGES
 ### Goals
-Over the next few weeks we hope to experiment with different types of basis functions and increase our parameter/BF set in order to represent more knowledge about the state. Currently, our model is limited in its granularity of approximating the state and in its inability recognize walls/boundaries and how they can box in the agent. We hope that adding some extra features will be able to solve these issues and improve performance.
+Over the next few weeks we hope to experiment with different types of basis functions and increase our parameter/BF set in order to represent more knowledge about the state. 
+Currently, our model is limited in its granularity of approximating the state and in its inability recognize walls/boundaries and how they can box in the agent. 
+We hope that adding some extra features will be able to solve these issues and improve performance.
+
+Also, we hope to increase our training to go from 100 iterations to 500 iterations. 
+This will hopefully give us a better indication of the average performance and improvement of each agent over time and will hopefully produce clearer plots.
 
 Another thing we may want to try is to add another unique baseline agent. Although this is low on our priority list.
 
 ### Challenges
-Some challenge we anticipate facing as the final report due date approaches include
+One of the challenges we face as the final deadline approaches include dealing with time. 
+Each episode take somewhere between 10 to 60 or more seconds, thus training 100 iterations can often take more than an hour. 
+Trying new combinations of basis functions and training for 500 iterations will be time costly.
+This will likely limit our ability to try the many different basis functions we can think of.
+Right now no obvoius solution to this exists other than running our code constantly.
+
