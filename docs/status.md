@@ -179,7 +179,7 @@ See figure 1 for the exact representation of the maze.
 #### Learner - 9 Dynamic BFs + 9 Tile Stationary BFs
 (description)
 
-#### Learner - 9 Dynamic BFs + 9 Coarse Stationary BFs
+#### Learner - 9 Dynamic BFs + 9 Coarse Stationary BFs (as seen in video)
 (description)
 
 #### Learner - 9 Dynamic BFs 
