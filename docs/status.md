@@ -156,8 +156,8 @@ This was an interesting case because here the agent would only know the relative
 It would have no knowledge of its own position in the environment.
 
 The performance of this agent was poor and actually worsened over time.
-As we see in the plots, the agent starts off with very noisy, random motions and average ~17 commands per episode before death.
-But as time continues, the agents learns a set of parameters that lead it average ~14-15 commands per episode.
+As we see in the plots, the agent starts off with ~17 commands per episode before death.
+But over time, the agents learns a set of parameters that lead it to ~14-15 commands per episode.
 
 The results can be seen in the figure below:
 <div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze-no-stationary-100.png" width="400"></div>
@@ -219,5 +219,5 @@ One of the challenges we face as the final deadline approaches include dealing w
 Each episode take somewhere between 10 to 60 or more seconds, thus training 100 iterations can often take more than an hour. 
 Trying new combinations of basis functions and training for 500 iterations will be time costly.
 This will likely limit our ability to try the many different basis functions we can think of.
-Right now no obvoius solution to this exists other than running our code constantly.
+Right now no obvious solution to this exists other than running our code constantly.
 
