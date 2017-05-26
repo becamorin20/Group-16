@@ -84,6 +84,10 @@ Within these two parts, we elaborate on the performance of a baseline, non-intel
 All of our individual evaluations are trained on 100 iterations/episodes.
 We did this because of time constraints with the deadline, but plan on expanding this number later.
 
+For each episode, we measure the number of commands sent by the agent while it is alive. 
+We then plot all of these data points for each evaluation onto a scatterplot and fit a 1-degree polynomial (using numpy) to the data.
+Be aware that each plot contains a lot of noise.
+
 ### No Maze
 To start our evaluation, we set our agent in a grid environment without a maze.
 <div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze.png" width="450"></div>
@@ -142,12 +146,25 @@ Looking at the agent in training (and as seen in the video), the agent is able t
 Once there, it appears to try to avoid the zombies, but does not succeed.
 The results can be seen in the figure below:
 <div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze-coarse-100.png" width="400"></div>
-Figure 11: Scatter plot with linear fit of Q-learner with coarse stationary BFs in no maze environment.
+Figure 11: Scatter plot with linear fit of Q-learner with coarse stationary BFs in a no maze environment.
 The agents does improvement and manages to stay alive for ~20-21 commands per episode by the end of training.
 We again see a lot of noise present in the data.
 
 #### Learner - 9 Dynamic BFs 
 The final "intelligent" agent we evaluate is an agent using the Q-learning algorithm (figure 6) with 9 dynamic basis functions (figure 2) and 0 stationary BFs.
+
+This was an interesting case because here the agent would only know the relative positions of zombies.
+It would have no indication of its own position in the environment.
+
+The performance of this agent was poor and actually worsened as time advanced.
+As we see in the plots, the agent starts off with very noisy, random motions and average ~17 commands per episode before death.
+But as time continues, the agents learns a set of parameters that lead it average ~14-15 commands per episode.
+We believe this is so because
+
+The results can be seen in the figure below:
+<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze-no-stationary-100.png" width="400"></div>
+Figure 12: Scatter plot with linear fit of Q-learner with no stationary BFs in a no maze environment.
+The agent shows regressing performance and manages to stay alive for only ~14-15 commands per episode by the end of training.
 
 
 ### Maze
