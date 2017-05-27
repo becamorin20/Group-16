@@ -4,7 +4,8 @@ title: Status
 ---
 
 # Zombie-Maze-Land PROJECT STATUS - 5/26/2017
-<video src="https://youtu.be/LjnAuq_4ytM" width="320" height="200" controls preload></video>
+[![Video](http://img.youtube.com/vi/LjnAuq_4ytM/0.jpg)](https://youtu.be/LjnAuq_4ytM)
+
 
 ## PROJECT SUMMARY
 The goal of this project is to have an agent survive for as long as possible in a 10x10 block environment with a maze and three zombies placed somewhere in the maze. The agent starts off in the middle of this environment. The zombies are placed at three pre-chosen spots. The agent must survive for as long as possible. See figure below for visualization:
