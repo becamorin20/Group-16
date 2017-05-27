@@ -7,6 +7,7 @@ title: Status
 [![IMAGE ALT TEXT HERE](https://youtu.be/LjnAuq_4ytM/0.jpg)](https://youtu.be/LjnAuq_4ytM)
 
 //raw.githubusercontent.com/ValaParthvi/valaparthvi.github.io/master/DSC_07321.resized.png
+a
 
 ## PROJECT SUMMARY
 The goal of this project is to survive for as long as possible in a 10x10 block environment with a maze and three zombies placed somewhere in the maze. The agent starts off in the middle of this environment. The zombies are placed at three pre-chosen spots. The agent must survive for as long as possible. See figure below for visualization:
@@ -24,7 +25,7 @@ Our reward function is -1000 for death.
 For our states and actions, we start off with 10x10 = 100 grid positions, 4 possible discrete actions (movenorth 1, movesouth 1, movewest 1, moveeast 1), and 4 total entities. 
 Using a Q-table, we would have to keep track of possibly 4 x 100<sup>4</sup> possible state-action pairs (4 for each action and 100x100x100x100 for each possible permutation of positions of each entity). 
 This is too large a number for us to expect to keep track of, so we approximate our state-action pairs with a list of 72 parameters 
-<div align="center"><img src="//raw.githubusercontent.com/becamorin20/becamorin20.github.io/Zombie-Maze-Land/master/docs/images/theta_list.png" width="250"></div>
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/becamorin20.github.io/Zombie-Maze-Land/blob/master/docs/images/theta_list.png" width="250"></div>
 
 To represent the state in our approximation, we use 72 basis functions as features:
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/basis_functions.png" width="600"></div>
