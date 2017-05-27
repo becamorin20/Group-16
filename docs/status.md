@@ -4,9 +4,7 @@ title: Status
 ---
 
 # Zombie-Maze-Land PROJECT STATUS - 5/26/2017
-Video Summary link: https://youtu.be/LjnAuq_4ytM
-
-
+[![IMAGE ALT TEXT HERE](https://youtu.be/LjnAuq_4ytM/0.jpg)](https://youtu.be/LjnAuq_4ytM)
 
 <img src="raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/maze.png" width="500">
 ## PROJECT SUMMARY
