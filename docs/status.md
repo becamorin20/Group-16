@@ -25,15 +25,15 @@ Our reward function is -1000 for death.
 For our states and actions, we start off with 10x10 = 100 grid positions, 4 possible discrete actions (movenorth 1, movesouth 1, movewest 1, moveeast 1), and 4 total entities. 
 Using a Q-table, we would have to keep track of possibly 4 x 100<sup>4</sup> possible state-action pairs (4 for each action and 100x100x100x100 for each possible permutation of positions of each entity). 
 This is too large a number for us to expect to keep track of, so we approximate our state-action pairs with a list of 72 parameters 
-<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/theta_list.png" width="250"></div>
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/theta_list.png" width="250"></div>
 
 To represent the state in our approximation, we use 72 basis functions as features:
-<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/basis_functions.png" width="600"></div>
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/basis_functions.png" width="600"></div>
 
 More precisely, we represent our state by breaking it down into 18 partitions: 9 dynamic partitions that move with the agent so that the agent is always at the center of this sub-space, and 9 stationary partitions that allow the agent to know which region of the environment the agent is in.
 We are currently experimenting with a couple different stationary sets of partitions.
 This is all visualized as followed in the figures below, along with descriptions for them:
-<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/basis_dynamic.png" width="350"></div>
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/basis_dynamic.png" width="350"></div>
 Figure 2: Picture of 9 dynamic partitions as basis functions. Green spot indicates position of agent. Red spots indicate position of zombies.
 The basis function for each partiton returns an integer indicating how many zombies are in that particular partition. 
 Possible integers include: 0,1,2,3.
@@ -42,7 +42,7 @@ Possible integers include: 0,1,2,3.
 
 .
 
-<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/basis_dynamic2.png" width="350"></div>
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/basis_dynamic2.png" width="350"></div>
 Figure 3: Picture of 9 dynamic partitions as basis functions. Green spot indicates position of agent. 
 The partitions move with the agent so that the agent is always at its center.  
 This allows us to keep track of the proximity of zombies to the agent.
@@ -51,7 +51,7 @@ This allows us to keep track of the proximity of zombies to the agent.
 
 .
 
-<div align="center"><img src="//becamorin20.github.io//basis_stationary1.png" width="350"></div>
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/basis_stationary1.png" width="350"></div>
 Figure 4: Picture of 9 stationary partitions as basis functions. 
 These partitions never move. Based off the "tile" basis functions from Sutton and Barto's _Reinforcement Learning: An Introduction_ .
 The basis function for each partiton returns an 1 if the agent is in it, 0 otherwise.
@@ -61,7 +61,7 @@ They do not keep track of zombie positions.
 
 .
 
-<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/basis_stationary2.png" width="350"></div>
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/basis_stationary2.png" width="350"></div>
 Figure 5: Picture of 9 stationary partitions as basis functions. 
 These partitions never move.
 These circular partitions have radius 2.50 unit blocks. Based off the "coarse" basis function from Sutton and Barto's _Reinforcement Learning: An Introduction_ .
@@ -76,7 +76,7 @@ So our MDP consists of reward function of -1000 for death and these 72 basis fun
 
 ### Algorithm
 We now show the algorithm we use to learn the parameters for the above function approximation. A full description of the algorithm can be found in Sutton and Barto's _Reinforcement Learning: An Introduction_ chapter 8. One key thing to note is that epsilon and alpha are monotonically decreasing functions of k.
-<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/algorithm3.png" width="500"></div>
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/algorithm3.png" width="500"></div>
 Figure 6: An online linear, gradient descent algorithm TD(lambda) for approximating Q(s,a) with eligibility tracing and an epsilon-greedy exploration.
 
 ## EVALUATION
@@ -92,7 +92,7 @@ Be aware that each plot contains a lot of noise.
 
 ### No Maze
 To start our evaluation, we set our agent in a grid environment without a maze.
-<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze.png" width="450"></div>
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze.png" width="450"></div>
 Figure 7: 10x10 maze environment without a maze. 
 Green spots indicate starting position of agent. 
 Red sports indicate starting position of zombies.
@@ -105,7 +105,7 @@ We believe this may just be noise and that running this program with more episod
 From the plots we see that the average number of commands alive each episode by the agent is approximately 23 commands.
 This will serve as a baseline to compare our "intelligent" agents with.
 The results can be seen in the figure below:
-<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze-random-100-2.png" width="400"></div>
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze-random-100-2.png" width="400"></div>
 Figure 8: Scatter plot of random agent performance in a no maze environment with linear fit. 
 We see negative performance in this plot over time.
 
@@ -119,7 +119,7 @@ This is, surprisingly, on pace with the random moving agent.
 We believe that this may be so because the random moving agent is hard to catch because it moves quickly and randomly and that perhaps the optimal amount of commands any agent can stay alive before being converged on by the zombies is ~22-23 commands.
 This will also serve as a baseline to compare to our "intelligent" agent. 
 The results can be seen in the figure below:
-<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze-handcode.png" width="400"></div>
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze-handcode.png" width="400"></div>
 Figure 9: Scatter plot of handcoded agent performance in a no maze environment with linear fit.
 The agent shows no improvement and stays alive for about 22-23 commands per episode on average.
 
@@ -132,7 +132,7 @@ From the plots, we see that performance did improve marginally as time continues
 
 The agent stayed alive for ~15-16 commands per episode.
 The results can be seen in the figure below:
-<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze-tile-100.png" width="400"></div>
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze-tile-100.png" width="400"></div>
 Figure 10: Scatter plot with linear fit of Q-learner with tile stationary BFs in no maze environment.
 The agents shows marginal improvement and stays alive for ~15-16 commands per episode.
 
@@ -147,7 +147,7 @@ The agent started out with about 17 commands alive per episode at the beginning 
 Looking at the agent in training (and as seen in the video), the agent is able to learn to manuver to the bottom right corner of the environment where the zombies are furthest away.
 Once there, it appears to try to avoid the zombies, but does not succeed.
 The results can be seen in the figure below:
-<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze-coarse-100.png" width="400"></div>
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze-coarse-100.png" width="400"></div>
 Figure 11: Scatter plot with linear fit of Q-learner with coarse stationary BFs in a no maze environment.
 The agents does improvement and manages to stay alive for ~20-21 commands per episode by the end of training.
 We again see a lot of noise present in the data.
@@ -163,7 +163,7 @@ As we see in the plots, the agent starts off with ~17 commands per episode befor
 But over time, the agents learns a set of parameters that lead it to ~14-15 commands per episode.
 
 The results can be seen in the figure below:
-<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze-no-stationary-100.png" width="400"></div>
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/no-maze-no-stationary-100.png" width="400"></div>
 Figure 12: Scatter plot with linear fit of Q-learner with no stationary BFs in a no maze environment.
 The agent shows regressing performance and manages to stay alive for only ~14-15 commands per episode by the end of training.
 
@@ -176,14 +176,14 @@ See figure 1 for the exact representation of the maze.
 The first baseline with a maze is a randomly moving agent. 
 
 The results can be seen in the figure below:
-<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/maze-random-100.png" width="400"></div>
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/maze-random-100.png" width="400"></div>
 Figure 13: Scatter plot with linear fit of random agent in maze environment. The agents performs near a constant 80-70 commands per episode.
 
 #### Baseline - Handcode (Mob Fun Algorithm)
 The second baseline with a maze is an agent moving according to the mob_fun.py algorithm.
 
 The results can be seen in the figure below:
-<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/maze-handcode-100.png" width="400"></div>
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/maze-handcode-100.png" width="400"></div>
 Figure 13: Scatter plot with linear fit of agent with mob fun algorithm in maze environment. The agents performs at a constant ~210 commands per episode.
 
 #### Learner - 9 Dynamic BFs + 9 Tile Stationary BFs
@@ -193,7 +193,7 @@ This agent showed little to no improvement over the course of training.
 Based on this agent's performance in the no-maze model, we expected something similar to what we saw.
 This agent still outperformed the random moving agent, unlike in the no maze model.
 The results can be seen in the figure below:
-<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/maze-q-tile-100.png" width="400"></div>
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/maze-q-tile-100.png" width="400"></div>
 Figure 15: Scatter plot with linear fit of Q-learner with 9 dynamic BFs and 9 stationary tile BFs. The plot shows marginal improvement during training.
 
 
@@ -204,7 +204,7 @@ This agent showed nice improvement over training as it nearly doubled its perfor
 By the end of training, it was even able to catch up to the performance of the mob fun handcoded agent. 
 
 The results can be seen in the figure below:
-<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/maze-q-coarse-100.png" width="400"></div>
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/maze-q-coarse-100.png" width="400"></div>
 Figure 16: Scatter plot with linear fit of Q-learner with 9 dynamic BFs and 9 stationary coarse circular BFs. The agent shows improvement and is able to go from 100 commands alive per episode to nearly 200 commands alive per episode by the end of training 100 iterations.
 
 #### Learner - 9 Dynamic BFs 
@@ -215,7 +215,7 @@ While it ultimately did not perform as well as the other agents, this agent did 
 It surpassed the performance of the random moving agent and nearly caught up to the performance of the tile agent.
 
 The results can be seen in the figure below:
-<div align="center"><img src="https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/maze-q-no-stationary-100.png" width="400"></div>
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/maze-q-no-stationary-100.png" width="400"></div>
 Figure 17: Scatter plot with linear fit of Q-learner with 9 dynamic BFs and 0 stationary BFs. The agent shows improvement and is able to go from 50 commands alive per episode to 100 commands alive per episode by the end of training 100 iterations.
 
 
