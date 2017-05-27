@@ -6,7 +6,7 @@ title: Status
 # PROJECT STATUS - 5/26/2017
 
 ## Video
-<div align="center">[![Video](http://img.youtube.com/vi/LjnAuq_4ytM/0.jpg)](https://youtu.be/LjnAuq_4ytM)</div>
+[![Video](http://img.youtube.com/vi/LjnAuq_4ytM/0.jpg)](https://youtu.be/LjnAuq_4ytM)
 
 
 ## PROJECT SUMMARY
