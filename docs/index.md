@@ -12,7 +12,7 @@ Figure 1: Picture of 10x10 maze environment for Malmo-Minecraft agent. Black spo
 
 ## Links
 
-[Video](https://youtu.be/LjnAuq_4ytM)
+[Status Video](https://youtu.be/LjnAuq_4ytM)
 
 [Source code](https://github.com/becamorin20/Zombie-Maze-Land/tree/master/docs/source-code)
 
