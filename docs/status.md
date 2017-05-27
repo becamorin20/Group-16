@@ -4,7 +4,7 @@ title: Status
 ---
 
 # Zombie-Maze-Land PROJECT STATUS - 5/26/2017
-[![Video](http://img.youtube.com/vi/LjnAuq_4ytM/1.jpg)](https://youtu.be/LjnAuq_4ytM)
+[![Video](http://img.youtube.com/vi/LjnAuq_4ytM/2.jpg)](https://youtu.be/LjnAuq_4ytM)
 
 
 ## PROJECT SUMMARY
