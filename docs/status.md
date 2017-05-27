@@ -8,7 +8,7 @@ Video Summary link: https://youtu.be/LjnAuq_4ytM
 
 
 
-
+<img src="raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/maze.png" width="500">
 ## PROJECT SUMMARY
 The goal of this project is to survive for as long as possible in a 10x10 block environment with a maze and three zombies placed somewhere in the maze. The agent starts off in the middle of this environment. The zombies are placed at three pre-chosen spots. The agent must survive for as long as possible. See figure below for visualization:
 <div align="center"><img src="raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/blob/master/docs/images/maze.png" width="500"></div>
