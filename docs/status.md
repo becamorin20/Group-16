@@ -3,8 +3,10 @@ layout: default
 title: Status
 ---
 
-# Zombie-Maze-Land PROJECT STATUS - 5/26/2017
-[![Video](http://img.youtube.com/vi/LjnAuq_4ytM/0.jpg)](https://youtu.be/LjnAuq_4ytM)
+# PROJECT STATUS - 5/26/2017
+
+## Video
+<iframe width="500" height="400" src="(https://youtu.be/LjnAuq_4ytM" frameborder="0" allowfullscreen></iframe>
 
 
 ## PROJECT SUMMARY
