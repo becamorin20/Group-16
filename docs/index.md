@@ -11,12 +11,10 @@ The goal of this project is to have an agent survive for as long as possible in 
 Figure 1: Picture of 10x10 maze environment for Malmo-Minecraft agent. Black spots indicate walls. White spots indicate free path. Green spot indicates starting position of agent. Red spot indicates starting position of zombies.
 
 ## Links
-Link to status report: https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/status.md
 
-Link to video: https://youtu.be/LjnAuq_4ytM
+[Video](https://youtu.be/LjnAuq_4ytM)
 
-Link to source code: https://github.com/becamorin20/Zombie-Maze-Land/tree/master/docs/source-code
+[Source code](https://github.com/becamorin20/Zombie-Maze-Land/tree/master/docs/source-code)
 
-Link to team members page: https://github.com/becamorin20/Zombie-Maze-Land/blob/master/docs/team.md
 
 
