@@ -175,7 +175,6 @@ class Agent(object):
             actions = []
             for a in self.possible_actions:
                 q_val = self.get_q_approx( self.agent, self.z1, self.z2, self.z3, a )
-                x[a] = q_val
                 if q_val == max_q:
                     actions.append( a )
                     max_q = q_val
