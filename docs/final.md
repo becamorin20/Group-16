@@ -15,7 +15,7 @@ The zombies are placed at three spots on the perimeter of the environment.
 The agent must survive for as long as possible. 
 See figure below for visualization:
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/maze.png" width="500"></div>
-Figure 1: Picture of 10x10 maze environment for Malmo-Minecraft agent. 
+**Figure 1**: Picture of 10x10 maze environment for Malmo-Minecraft agent. 
 Black spots indicate walls. White spots indicate free path. 
 Green spot indicates starting position of agent. 
 Red spot indicates starting position of zombies.
@@ -41,9 +41,9 @@ Creativity and experimenting with different combinations of BFs was required.
 
 .
 
-Another reason this may not be considered trivial is because it was not one of the examples that Malmo provided nor did we use an off the shelf program. 
+Another reason we consider this non-trivial is because it was not one of the examples that Malmo provided nor did we use an off the shelf program. 
 We did take away a lot from the examples from Malmo, especially things concerning the environment XML.
-But for the most part we coded our own parameters, our own updates, and our own basis functions using only books as references.
+But for the most part we coded our own parameters, our own updates, and our own basis functions using mainly books as references.
 
 
 ## Approaches
@@ -54,11 +54,23 @@ enough technical information to be able to (mostly) reproduce your project, in p
 and equations as much as possible.
 
 ### Markov Decison Process (MDP)
+We first describe our Markov Decision Process.
+
+Our reward function is $$-1000$$ for death. 
+
+Our action space is ($$\leftarrow$$, $$\uparrow$$, $$\downarrow$$, $$\rightarrow$$). 
+In Malmo, this is ('moveeast1', 'movenorth 1', 'movesouth 1', 'movewest 1').
+
+As we described earlier, our state consists of 100 blocks and 4 entities (3 zombies + 1 agent). 
+
+
 
 ### Algorithm
-We now show the algorithm we use to learn the parameters for our Q approximation. A full description of the algorithm can be found in Sutton and Barto's _Reinforcement Learning: An Introduction_, Chapter 8. One key thing to note is that $$\epsilon$$ and $$\alpha$$ are monotonically decreasing functions of $$k$$.
+We now show the algorithm we use to learn the parameters for our Q-approximation. 
+A full description of the algorithm can be found in Sutton and Barto's _Reinforcement Learning: An Introduction_, Chapter 8. 
+One key thing to note is that $$\epsilon$$ and $$\alpha$$ are monotonically decreasing functions of $$k$$.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/alg4.png" width="500"></div>
-Figure 6: An online linear, gradient descent Q-learning algorithm for approximating Q(s,a) with eligibility tracing and an $$\epsilon -$$greedy exploration.
+**Figure 6**: An online linear, gradient descent Q-learning algorithm for approximating Q(s,a) with eligibility tracing and an $$\epsilon -$$greedy exploration.
 
 ## Evaluation
 
