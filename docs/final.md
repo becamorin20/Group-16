@@ -54,7 +54,7 @@ enough technical information to be able to (mostly) reproduce your project, in p
 and equations as much as possible.
 
 ### Algorithm
-We now show the algorithm we use to learn the parameters for the above function approximation. A full description of the algorithm can be found in Sutton and Barto's _Reinforcement Learning: An Introduction_: Chapter 8. One key thing to note is that $$\epsilon and \alpha$$ are monotonically decreasing functions of k.
+We now show the algorithm we use to learn the parameters for the above function approximation. A full description of the algorithm can be found in Sutton and Barto's _Reinforcement Learning: An Introduction_: Chapter 8. One key thing to note is that $$\epsilon and \alpha$$ are monotonically decreasing functions of $$k$$.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/alg4.png" width="500"></div>
 Figure 6: An online linear, gradient descent Q-learning algorithm for approximating Q(s,a) with eligibility tracing and an $$\epsilon -$$greedy exploration.
 
