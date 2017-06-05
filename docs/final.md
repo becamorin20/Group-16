@@ -27,8 +27,17 @@ Without a maze, the agent really only has one general optimal path, that is, to 
 The agent is not fast enough to outrun the zombies, so it always gets killed quickly unless it starts immediately running to the safest spot - the corner.
 With the maze, the agent has an opportunity to survive for a long time by hiding from the zombies in the maze. 
 Zombies only attack when they see the agent, so the agent can use his/her "smarts" to survive longer - this is where we use an AI/ML algorithm.
+We use reinforcement learning for this problem, specifically Q-learning. 
+
+.
 
 We consider this task non-trivial because of its large state space. 
+Using a table to keep track of the state-action pairs, we would have to keep track of approximately $$4 x 100^4$$ or $$4 x 10^8$$ values - 4 for each action and 100x100x100x100 for each possible permutation of positions for each agent.
+This is too large a number for traditional Q-tabular learning.
+Therefore, we approximate the Q-table with a parameterized function. 
+We believe this can be considered non-trivial because of the numerous ways we can represent the state via basis functions (BFs).
+Some set of basis functions may be better than others.
+Creativity and experimenting with different combinations of BFs was required.
 
 
 ## Approaches
