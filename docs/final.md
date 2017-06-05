@@ -98,7 +98,7 @@ Possible values include $$(0,1,2,3)$$.
 This allows our agent to know the general position of each zombie relative to him/her. 
 They do not keep track of the agents position since the agent is always at the center.
 This can be seen in the figure below.
-<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/dynamic_bfs.png" width="350"></div>
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/dynamic_bfs.png" width="425"></div>
 **Figure 2**: Images of 9 dynamic partitions as basis functions. Green spot indicates position of agent. Red spots indicate position of zombies.
 
 #### 9 Dynamic Stationary Basis Functions with previous zombie position
