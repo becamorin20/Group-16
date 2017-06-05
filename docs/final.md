@@ -47,6 +47,16 @@ But for the most part we coded our own parameters, our own updates, and our own 
 
 
 ## Approaches
+Use another level-two header called Approaches, In this section, describe both the baselines
+and your proposed approach(es). Describe precisely what the advantages and disadvantages of each are,
+for example, why one might be more accurate, need less data, take more time, overfit, and so on. Include
+enough technical information to be able to (mostly) reproduce your project, in particular, use pseudocode
+and equations as much as possible.
+
+### Algorithm
+We now show the algorithm we use to learn the parameters for the above function approximation. A full description of the algorithm can be found in Sutton and Barto's _Reinforcement Learning: An Introduction_: Chapter 8. One key thing to note is that $$\epsilon and \alpha$$ are monotonically decreasing functions of k.
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/alg4.png" width="500"></div>
+Figure 6: An online linear, gradient descent Q-learning algorithm for approximating Q(s,a) with eligibility tracing and an $$\epsilon -$$greedy exploration.
 
 ## Evaluation
 
