@@ -53,6 +53,30 @@ for example, why one might be more accurate, need less data, take more time, ove
 enough technical information to be able to (mostly) reproduce your project, in particular, use pseudocode
 and equations as much as possible.
 
+### Baseline
+We considered two baselines for our project. One was a randomly moving agent and one was an agent moving according to the mob_fun.py algorithm from a Malmo example.
+
+#### Random
+Randomly pick an action each time. 
+One possible advantage of this is that the agent doesn't have to do a lot of calculations in order to update parameters and pick an action, unlike our RL agent. 
+This can allow the agent to possibly move quicker.
+However, we consider this advantage marginal.
+
+Obviously a disadvantage of this algorithm is its inability improve or make decisions based on its position and the relative position of zombies.
+
+#### Mob Fun Algorithm
+The mob fun agent works by continually moving straight forward and then gradually angling its movement (i.e. turning) using a score to determine the turn angle. 
+The turn score is determined using a sum of a weighted cost of turning, cost of entity proximity, and cost of proximity to edges.
+We copied directly from the weights used by the Malmo example, where the turn weight was $$0$$, the entity proximity weight was $$-10/(distance$$ $$to$$ $$entity)$$, and the proximity to edge weight was $$-100/(distance$$ $$to$$ $$wall)^4$$ for each wall.
+
+One advantage of this algorithm is its use of continuous actions. 
+The agent is constantly moving, never stopping to make calculations. 
+The only commands it sends are the angle which to turn by. 
+This can allow the agent to possibly move faster and survive longer because zombies may have a harder time catching up to it.
+
+One disadvantage of this algorithm is its inability to improve over time. 
+Using the same starting state, the agent is always moving in this same initial direction, deviating its path only slightly depending on the movements of the zombies. 
+
 ### Markov Decison Process (MDP)
 We first describe our Markov Decision Process.
 
@@ -62,7 +86,9 @@ Our action space is ($$\leftarrow$$, $$\uparrow$$, $$\downarrow$$, $$\rightarrow
 In Malmo, this is ('moveeast1', 'movenorth 1', 'movesouth 1', 'movewest 1').
 
 As we described earlier, our state consists of 100 blocks and 4 entities (3 zombies + 1 agent). 
-
+Our state space then includes $$10^8$$ values. 
+This is too large, so we approximate our state space with sets of basis functions (BFs).
+In the rest of this section we will see the different basis functions we experimented with.
 
 
 ### Algorithm
