@@ -32,7 +32,7 @@ We use reinforcement learning for this problem, specifically Q-learning.
 .
 
 We consider this task non-trivial because of its large state space. 
-Using a table to keep track of the state-action pairs, we would have to keep track of approximately $$4 x 100^4$$ or $$4 x 10^8$$ values - 4 for each action and 100x100x100x100 for each possible permutation of positions for each entity.
+Using a table to keep track of the state-action pairs, we would have to keep track of approximately $$100^4$$ or $$10^8$$ values - 100x100x100x100 for each possible permutation of positions for each entity.
 This is too large a number for traditional Q-tabular learning.
 Therefore, we approximate the Q-table with a parameterized function. 
 We believe this can be considered non-trivial because of the numerous ways we can represent the state via basis functions (BFs).
