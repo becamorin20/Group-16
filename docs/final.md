@@ -72,10 +72,10 @@ We copied directly from the weights used by the Malmo example, where the turn we
 One advantage of this algorithm is its use of continuous actions. 
 The agent is constantly moving, never stopping to make calculations. 
 The only commands it sends are the angle which to turn by. 
-This allows the agent to move faster and survive longer because zombies may have a harder time catching up to it.
+This allows the agent to move faster and survive longer because zombies may have a harder time catching it.
 
 One disadvantage of this algorithm is its inability to improve over time. 
-Using the same starting state, the agent is always moving in this same initial direction, deviating its path only slightly depending on the movements of the zombies. 
+Using the same starting state, the agent always moves in the same initial direction, deviating its path only slightly depending on the movements of the zombies. 
 
 ### Markov Decison Process (MDP)
 We first describe our Markov Decision Process.
