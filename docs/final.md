@@ -20,6 +20,7 @@ Black spots indicate walls. White spots indicate free path.
 Green spot indicates starting position of agent. 
 Red spot indicates starting position of zombies.
 
+.
 
 The challenges of this problem are for the agent to use the maze to its advantage in surviving and accomodating a large state space. 
 Without a maze, the agent really only has one general optimal path, that is, to go the corner where there are no zombies, until it gets killed.
