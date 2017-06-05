@@ -72,7 +72,7 @@ We copied directly from the weights used by the Malmo example, where the turn we
 One advantage of this algorithm is its use of continuous actions. 
 The agent is constantly moving, never stopping to make calculations. 
 The only commands it sends are the angle which to turn by. 
-This can allow the agent to possibly move faster and survive longer because zombies may have a harder time catching up to it.
+This allows the agent to move faster and survive longer because zombies may have a harder time catching up to it.
 
 One disadvantage of this algorithm is its inability to improve over time. 
 Using the same starting state, the agent is always moving in this same initial direction, deviating its path only slightly depending on the movements of the zombies. 
@@ -89,6 +89,20 @@ As we described earlier, our state consists of 100 blocks and 4 entities (3 zomb
 Our state space then includes $$10^8$$ values. 
 This is too large, so we approximate our state space with sets of basis functions (BFs).
 In the rest of this section we will see the different basis functions we experimented with.
+
+#### 9 Dynamic Stationary Basis Functions
+
+#### 9 Dynamic Stationary Basis Functions with walls
+
+#### 9 Tile Stationary Basis Functions
+
+#### 9 Coarse Stationary Basis Functions
+
+#### 9 Gaussian Radial Basis Functions (stationary)
+
+#### 25 Tile Stationary Basis Functions
+
+#### 25 Coarse Stationary Basis Functions
 
 
 ### Algorithm
