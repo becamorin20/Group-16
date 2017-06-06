@@ -184,7 +184,7 @@ Now that we've seen the many different BFs used - we'll look at the algorithm we
 First, we show that we approximate our Q-function with a parametric approximator:
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/q_function.png" width="300"></div>
 
-Our algorithm learn the parameters $$\theta$$ for our Q-approximator. 
+Our algorithm learns the parameters $$\theta$$ for our Q-approximator. 
 A full description of the algorithm can be found in Sutton and Barto's _Reinforcement Learning: An Introduction_, Chapter 8. 
 One key thing to note is that $$\epsilon$$ and $$\alpha$$ are monotonically decreasing functions of $$k$$.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/alg4.png" width="500"></div>
