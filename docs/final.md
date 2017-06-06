@@ -154,7 +154,7 @@ Our features, $$(x,y)-$$Cartesian coordinates, are continuous, so it seems natur
 At first, we were apprehensive because of the symmetricity of our BFs about its center. 
 But we later realized this would be offset by the values of the other BFs $$-$$ that is, if 2 points were symmetric about a particular BF, that BF would return the same value for both, but all the other BFs would return different values (albeit small values) that would in theory help distinguish the 2 points.
 
-We use a 1-dimensional Gaussian function for each region, where the variable is the distance from the center of the Gaussian:
+We use a Gaussian function for each region, where the variable is the distance from the center of the Gaussian:
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/gaussian2.png" width="400"></div>
 
 An image and description of our Gaussian RBFs can be seen below:
