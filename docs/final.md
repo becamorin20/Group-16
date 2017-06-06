@@ -117,7 +117,7 @@ The same as the original 9 dynamic BFs, except we also keep of the previous stat
 **Figure 3**
 
 #### 9 Gaussian Radial Basis Functions (stationary)
-<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/gaussian_rbf.png" width="500"></div>
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/gaussian_rbf2.png" width="500"></div>
 **Figure 4**
 
 #### 25 Tile Stationary Basis Functions
