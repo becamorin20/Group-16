@@ -105,28 +105,37 @@ This can be seen in the figure below.
 **Figure 2**: Images of 9 dynamic partitions as basis functions. Green spot indicates position of agent. Red spots indicate position of zombies.
 
 #### 9 Dynamic Basis Functions with previous zombie position
-The same as the original 9 dynamic BFs, except we also keep of the previous state of each zombie. 
+The same as the original 9 dynamic BFs, except we also keep track of the previous state of each zombie. 
+Specifically, we double the number of dynamic BFs so that we have 18 total dynamic BFs - 9 for the current state and 9 for the previous state.
+For the previous BFs, we use the previous position of the zombies and the current position of the agent.
+Our reasoning is that by keeping track of these states, the agent can see the progression of movement that the zombie makes toward him/her.
+
 
 #### 9 Dynamic Basis Functions with walls
+These BFs are the nearly identical to the original 9 dynamic BFs (figure 2), except we try to incorporate a sense of proximity to the wall in our agent. 
+We do this by modifying our middle BF, _p5_, to add a constant $$0.5$$ if a wall is in it's region. 
+This means that the possible values for this BF is $${0,0.5,1,1.5,2,2.5,3,3.5}$$, instead of $${0,1,2,3}$$.
+
 
 #### 9 Tile Stationary Basis Functions
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/basis_stationary1.png" width="350"></div>
+**Figure 3**
 
 #### 9 Coarse Stationary Basis Functions
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/basis_stationary2.png" width="350"></div>
-**Figure 3**
+**Figure 4**
 
 #### 9 Gaussian Radial Basis Functions (stationary)
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/gaussian_rbf2.png" width="500"></div>
-**Figure 4**
+**Figure 5**
 
 #### 25 Tile Stationary Basis Functions
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/tile25.png" width="400"></div>
-**Figure 5**
+**Figure 6**
 
 #### 25 Coarse Stationary Basis Functions
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/coarse25.png" width="400"></div>
-**Figure 6**
+**Figure 7**
 
 
 ### Algorithm
@@ -134,7 +143,7 @@ We now show the algorithm we use to learn the parameters for our Q-approximation
 A full description of the algorithm can be found in Sutton and Barto's _Reinforcement Learning: An Introduction_, Chapter 8. 
 One key thing to note is that $$\epsilon$$ and $$\alpha$$ are monotonically decreasing functions of $$k$$.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/alg4.png" width="500"></div>
-**Figure 7**: An online linear, gradient descent Q-learning algorithm for approximating Q(s,a) with eligibility tracing and an $$\epsilon -$$greedy exploration.
+**Figure 8**: An online linear, gradient descent Q-learning algorithm for approximating Q(s,a) with eligibility tracing and an $$\epsilon -$$greedy exploration.
 
 ## Evaluation
 
