@@ -114,15 +114,19 @@ The same as the original 9 dynamic BFs, except we also keep of the previous stat
 
 #### 9 Coarse Stationary Basis Functions
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/basis_stationary2.png" width="350"></div>
+**Figure 3**
 
 #### 9 Gaussian Radial Basis Functions (stationary)
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/gaussian_rbf.png" width="500"></div>
+**Figure 4**
 
 #### 25 Tile Stationary Basis Functions
-<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/tile25.png" width="500"></div>
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/tile25.png" width="400"></div>
+**Figure 5**
 
 #### 25 Coarse Stationary Basis Functions
-<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/coarse25.png" width="500"></div>
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/coarse25.png" width="400"></div>
+**Figure 6**
 
 
 ### Algorithm
@@ -130,7 +134,7 @@ We now show the algorithm we use to learn the parameters for our Q-approximation
 A full description of the algorithm can be found in Sutton and Barto's _Reinforcement Learning: An Introduction_, Chapter 8. 
 One key thing to note is that $$\epsilon$$ and $$\alpha$$ are monotonically decreasing functions of $$k$$.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/alg4.png" width="500"></div>
-**Figure 6**: An online linear, gradient descent Q-learning algorithm for approximating Q(s,a) with eligibility tracing and an $$\epsilon -$$greedy exploration.
+**Figure 7**: An online linear, gradient descent Q-learning algorithm for approximating Q(s,a) with eligibility tracing and an $$\epsilon -$$greedy exploration.
 
 ## Evaluation
 
