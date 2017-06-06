@@ -39,6 +39,7 @@ Another reason we consider this non-trivial is because it was not one of the exa
 We did take away a lot from the examples from Malmo, especially things concerning the environment XML.
 But for the most part we coded our own parameters, our own updates, and our own basis functions using mainly books as references.
 
+<br><br>
 
 ## Approaches
 Use another level-two header called Approaches, In this section, describe both the baselines
@@ -117,7 +118,7 @@ These BFs are the nearly identical to the original 9 dynamic BFs (figure 2), exc
 We do this by modifying our middle dynamic BF, _p5_, to add a constant $$0.5$$ if a wall is in it's region. 
 This means that the possible values for this BF are $${0,0.5,1,1.5,2,2.5,3,3.5}$$, instead of $${0,1,2,3}$$.
 
-These modifications give our agent an further advantage by letting him know if he is getting too close to wall and boxing himself in
+These modifications give our agent an further advantage by letting him know if he is getting too close to a wall and boxing him/her self in.
 
 <br><br>
 
@@ -184,6 +185,8 @@ A full description of the algorithm can be found in Sutton and Barto's _Reinforc
 One key thing to note is that $$\epsilon$$ and $$\alpha$$ are monotonically decreasing functions of $$k$$.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/alg4.png" width="500"></div>
 **Figure 8**: An online linear, gradient descent Q-learning algorithm for approximating Q(s,a) with eligibility tracing and an $$\epsilon -$$greedy exploration.
+
+<br><br>
 
 ## Evaluation
 
