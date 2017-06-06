@@ -141,13 +141,14 @@ At first, we were apprehensive because of the symmetricity of our BFs about its 
 But we later realized this would be offset by the values of the other BFs $$-$$ that is, if 2 points were symmetric about a particular BF, that BF would return the same value for both, but all the other BFs would return different values (albeit small values) that would in theory help distinguish the 2 points.
 
 We use a 1-dimensional Gaussian function for each region, where the variable is the distance from the center of the Gaussian:
-<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/gaussian.png" width="400"></div>
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/gaussian2.png" width="400"></div>
 
 An image and description of our Gaussian RBFs can be seen below:
 
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/gaussian_rbf2.png" width="500"></div>
-**Figure 5**: Image of 9 Gaussian radial basis functions. 
-Our functions are normalized so that it returns 1 at the center $$-$$ we use the same centers as we do for the coarse stationary BFs (figure 4). 
+**Figure 5**: Image of 9 Gaussian radial basis functions.  
+We use the same centers as we do for the coarse stationary BFs (figure 4). 
+At the center of each BF - that BF will return 1.
 We set our standard deviation to 1.25. 
 We choose this number so that 2 standard deviations is equal to the radius of the coarse circular stationary BFs.
 
