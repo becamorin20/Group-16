@@ -107,20 +107,22 @@ This can be seen in the figure below.
 #### 9 Dynamic Basis Functions with previous zombie position
 The same as the original 9 dynamic BFs, except we also keep of the previous state of each zombie. 
 
-
-
 #### 9 Dynamic Basis Functions with walls
 
 #### 9 Tile Stationary Basis Functions
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/basis_stationary1.png" width="350"></div>
 
 #### 9 Coarse Stationary Basis Functions
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/basis_stationary2.png" width="350"></div>
 
 #### 9 Gaussian Radial Basis Functions (stationary)
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/gaussian_rbf.png" width="500"></div>
 
 #### 25 Tile Stationary Basis Functions
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/tile25.png" width="500"></div>
 
 #### 25 Coarse Stationary Basis Functions
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/coarse25.png" width="500"></div>
 
 
 ### Algorithm
