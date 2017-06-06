@@ -160,7 +160,7 @@ We use a Gaussian function for each region, where each function is dependent on 
 An image and description of our Gaussian RBFs can be seen below:
 
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/gaussian_rbf2.png" width="500"></div>
-**Figure 5**: Image of 9 Gaussian radial basis functions. We use the same centers as we do for the coarse stationary BFs (figure 4). At the center of each BF, that BF will return 1. We set our standard deviation to 1.25 unit blocks. We choose this number so that 2 standard deviations is equal to the radius of the coarse circular stationary BFs we used earlier.
+**Figure 5**: Image of 9 Gaussian radial basis functions. We use the same centers as we do for the coarse stationary BFs (figure 4). At the center of each BF, that BF will return 1. We set our standard deviation $$\sigma$$ to 1.25 unit blocks. We choose this number so that 2 standard deviations is equal to the radius of the coarse circular stationary BFs we used earlier.
 
 <br><br>
 
