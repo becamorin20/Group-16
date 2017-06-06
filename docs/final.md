@@ -98,6 +98,8 @@ This can be seen in the figure below.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/dynamic_bfs.png" width="600"></div>
 **Figure 2**: Images of 9 dynamic partitions as basis functions. Green spot indicates position of agent. Red spots indicate position of zombies.
 
+<br><br>
+
 #### 9 Dynamic Basis Functions with previous zombie position
 
 The same as the original 9 dynamic BFs (figure 2), except we also keep track of the previous state of each zombie. 
@@ -106,23 +108,48 @@ Specifically, we double the number of dynamic BFs so that we have 18 total dynam
 For the previous BFs, we use the previous position of the zombies and the current position of the agent.
 Our reasoning is that by keeping track of these states, the agent can see the progression of movement that the zombie makes toward him/her.
 
+<br><br>
+
 #### 9 Dynamic Basis Functions with walls
 These BFs are the nearly identical to the original 9 dynamic BFs (figure 2), except we try to incorporate a sense of proximity to the wall in our agent. 
 We do this by modifying our middle dynamic BF, _p5_, to add a constant $$0.5$$ if a wall is in it's region. 
 This means that the possible values for this BF are $${0,0.5,1,1.5,2,2.5,3,3.5}$$, instead of $${0,1,2,3}$$.
 
-#### 9 Tile Stationary Basis Functions
+<br><br>
 
+#### 9 Tile Stationary Basis Functions
+We will now examine some the stationary BFs we used. The stationary basis functions only keep track of the agent's position. They do not keep track of zombies. All of our stationary BFs are taken from Sutton and Barto's _Reinforcement Learning: An Introduction_, chapter 8.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/basis_stationary1.png" width="350"></div>
-**Figure 3**
+**Figure 3**: Image of 9 tile stationary basis functions. If the agent is in the region of a particular BF, it returns 1, otherwise 0.
+
+<br><br>
 
 #### 9 Coarse Stationary Basis Functions
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/basis_stationary2.png" width="350"></div>
-**Figure 4**
+**Figure 4**: Image of 9 coarse circular stationary basis functions. If the agent is in the region of a particular BF, it returns 1, otherwise 0.
 
 #### 9 Gaussian Radial Basis Functions (stationary)
+This set of BFs is new to our project $$-$$ it was not in our status report. From Sutton and Barto:
+
+"Radial basis functions (RBFs) are the natural generalization of coarse coding to continuous-valued features. 
+Rather than each feature being either 0 or 1, it can be anything in the interval [0,1], reflecting various _degrees_ to which the feature is present."
+
+Our features, $$(x,y)$$ Cartesian coordinates, are continuous, so it seems natural to represent them using these Gaussian RBFs. 
+At first, we were apprehensive because of the symmetricity of our BFs about its center. 
+But we later realized this would be offset by the values of the other BFs $$-$$ that is, if 2 points were symmetric about a particular BF, that BF would return the same value for both, but all the other BFs would return different values (albeit small values) that would in theory help distinguish the 2 points.
+
+We use a 1-dimensional Gaussian function for each region, where the variable is the distance from the center of the Gaussian:
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/gaussian.png" width="400"></div>
+
+An image and description of our Gaussian RBFs can be seen below:
+
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/gaussian_rbf2.png" width="500"></div>
-**Figure 5**
+**Figure 5**: Image of 9 Gaussian radial basis functions. 
+Our functions are normalized so that it returns 1 at the center $$-$$ we use the same centers as we do for the coarse stationary BFs (figure 4). 
+We set our standard deviation to 1.25. 
+We choose this number so that 2 standard deviations is equal to the radius of the coarse circular stationary BFs.
+
+<br><br>
 
 #### 25 Tile Stationary Basis Functions
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/tile25.png" width="400"></div>
