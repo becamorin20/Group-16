@@ -95,7 +95,7 @@ In the rest of this section we will go through the different sets of basis funct
 
 #### 9 Dynamic Basis Functions
 9 dynamic basis functions (BFs) that move with the agent so that the agent is always at the center of this sub-space. 
-These BFs keep track of which zombie is in which BF/partition.
+These BFs keep track of how many zombies are in each BF/partition.
 They return an integer indicating how many zombies are in that particular region. 
 Possible values include $${0,1,2,3}$$.
 This allows our agent to know the general position of each zombie relative to him/her. 
@@ -106,7 +106,7 @@ This can be seen in the figure below.
 
 #### 9 Dynamic Basis Functions with previous zombie position
 The same as the original 9 dynamic BFs, except we also keep of the previous state of each zombie. 
-Speci
+
 
 
 #### 9 Dynamic Basis Functions with walls
@@ -116,6 +116,7 @@ Speci
 #### 9 Coarse Stationary Basis Functions
 
 #### 9 Gaussian Radial Basis Functions (stationary)
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/gaussian_rbf.png" width="500"></div>
 
 #### 25 Tile Stationary Basis Functions
 
