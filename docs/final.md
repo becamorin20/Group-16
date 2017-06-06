@@ -85,7 +85,9 @@ This is too large, so we approximate our **_state space_** with sets of basis fu
 
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/phi.png" width="600"></div>
 
-In the rest of this section we will go through the different sets of basis functions we experimented with.
+We tried multiple different basis functions and multiple combinations of them. 
+In the evaluation we will see the different BF combinations we used.
+In the rest of this section we will go through the different sets of basis functions we experimented with (not combinations of them).
 
 #### 9 Dynamic Basis Functions
 9 dynamic basis functions (BFs) that move with the agent so that the agent is always at the center of this sub-space. 
@@ -106,7 +108,7 @@ The same as the original 9 dynamic BFs (figure 2), except we also keep track of 
 Specifically, we double the number of dynamic BFs so that we have 18 total dynamic BFs $$-$$ 9 for the current state and 9 for the previous state.
 
 For the previous BFs, we use the previous position of the zombies and the current position of the agent.
-Our reasoning is that by keeping track of these states, the agent can see the progression of movement that the zombie makes toward him/her.
+Our reasoning is that by keeping track of these states, the agent can see the progression of movement that the zombie makes toward him/her. This is one advantage for these modifications.
 
 <br><br>
 
@@ -115,16 +117,27 @@ These BFs are the nearly identical to the original 9 dynamic BFs (figure 2), exc
 We do this by modifying our middle dynamic BF, _p5_, to add a constant $$0.5$$ if a wall is in it's region. 
 This means that the possible values for this BF are $${0,0.5,1,1.5,2,2.5,3,3.5}$$, instead of $${0,1,2,3}$$.
 
+These modifications give our agent an further advantage by letting him know if he is getting too close to wall and boxing himself in
+
 <br><br>
 
 #### 9 Tile Stationary Basis Functions
 We will now examine some the stationary BFs we used. The stationary basis functions only keep track of the agent's position. They do not keep track of zombies. All of our stationary BFs are taken from Sutton and Barto's _Reinforcement Learning: An Introduction_, chapter 8.
+
+An advantage of these BFs is that "the overall number of features that are present at one time is strictly controlled and independent of the input state" (Sutton and Barto).
+A disadvantage is that they do not let the agent know precisely where he is, only the general region. 
+See the image below:
+
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/basis_stationary1.png" width="350"></div>
 **Figure 3**: Image of 9 tile stationary basis functions. If the agent is in the region of a particular BF, it returns 1, otherwise 0.
 
 <br><br>
 
 #### 9 Coarse Stationary Basis Functions
+These BFs are very similar to the stationary tile BFs. 
+They both have essentially the same advantages and disadvantages.
+One further advantage the coarse circular BFs may have is that they overlap, which can possibly let the agent know more precisely where he/she is. See the image below:
+
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/basis_stationary2.png" width="350"></div>
 **Figure 4**: Image of 9 coarse circular stationary basis functions. If the agent is in the region of a particular BF, it returns 1, otherwise 0. The radius of each circle is 2.5 unit blocks.
 
@@ -151,9 +164,11 @@ An image and description of our Gaussian RBFs can be seen below:
 <br><br>
 
 #### 25 Tile Stationary Basis Functions
+We will now see extensions of previous BFs we tried. 
+These next sets of BFs are designed to smaller and more granular and have the advantage of being more precise in letting the agent know where he/she is. 
+A possible disadvantage is the extra computation involved, which could slow the agent down and cause him to be killed faster.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/tile25.png" width="400"></div>
 **Figure 6**: Image of 25 tile stationary basis functions. If the agent is in the region of a particular BF, it returns 1, otherwise 0. This is an extension of our original attempt at tile BFs in order to see if more granularity in the state represention would produce better results.
-
 
 <br><br>
 
