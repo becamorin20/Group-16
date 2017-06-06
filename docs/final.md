@@ -126,7 +126,7 @@ We will now examine some the stationary BFs we used. The stationary basis functi
 
 #### 9 Coarse Stationary Basis Functions
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/basis_stationary2.png" width="350"></div>
-**Figure 4**: Image of 9 coarse circular stationary basis functions. If the agent is in the region of a particular BF, it returns 1, otherwise 0.
+**Figure 4**: Image of 9 coarse circular stationary basis functions. If the agent is in the region of a particular BF, it returns 1, otherwise 0. The radius of each circle is 2.5 unit blocks.
 
 <br><br>
 
@@ -136,7 +136,7 @@ This set of BFs is new to our project $$-$$ it was not in our status report. Fro
 "Radial basis functions (RBFs) are the natural generalization of coarse coding to continuous-valued features. 
 Rather than each feature being either 0 or 1, it can be anything in the interval [0,1], reflecting various _degrees_ to which the feature is present."
 
-Our features, $$(x,y)$$ Cartesian coordinates, are continuous, so it seems natural to represent them using these Gaussian RBFs. 
+Our features, $$(x,y)-$$Cartesian coordinates, are continuous, so it seems natural to represent them using these Gaussian RBFs. 
 At first, we were apprehensive because of the symmetricity of our BFs about its center. 
 But we later realized this would be offset by the values of the other BFs $$-$$ that is, if 2 points were symmetric about a particular BF, that BF would return the same value for both, but all the other BFs would return different values (albeit small values) that would in theory help distinguish the 2 points.
 
@@ -148,19 +148,30 @@ An image and description of our Gaussian RBFs can be seen below:
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/gaussian_rbf2.png" width="500"></div>
 **Figure 5**: Image of 9 Gaussian radial basis functions.  
 We use the same centers as we do for the coarse stationary BFs (figure 4). 
-At the center of each BF - that BF will return 1.
-We set our standard deviation to 1.25. 
+At the center of each BF, that BF will return 1.
+We set our standard deviation to 1.25 unit blocks. 
 We choose this number so that 2 standard deviations is equal to the radius of the coarse circular stationary BFs.
 
 <br><br>
 
 #### 25 Tile Stationary Basis Functions
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/tile25.png" width="400"></div>
-**Figure 6**
+**Figure 6**: Image of 25 tile stationary basis functions. 
+If the agent is in the region of a particular BF, it returns 1, otherwise 0.
+This is an extension of our original attempt at tile BFs in order to see if more granularity in the state represention would produce better results.
+
+
+<br><br>
 
 #### 25 Coarse Stationary Basis Functions
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/coarse25.png" width="400"></div>
-**Figure 7**
+**Figure 7**: Image of 25 coarse circular stationary basis functions. 
+If the agent is in the region of a particular BF, it returns 1, otherwise 0. 
+The radius of each circle is $$\sqrt{2}$$ unit blocks.
+This is an extension of our original attempt at coarse BFs in order to see if more granularity in the state represention would produce better results.
+
+
+<br><br>
 
 ### Algorithm
 We now show the algorithm we use to learn the parameters for our Q-approximation. 
