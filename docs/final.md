@@ -100,7 +100,7 @@ This can be seen in the figure below.
 
 #### 9 Dynamic Basis Functions with previous zombie position
 
-The same as the original 9 dynamic BFs, except we also keep track of the previous state of each zombie. 
+The same as the original 9 dynamic BFs (figure 2), except we also keep track of the previous state of each zombie. 
 Specifically, we double the number of dynamic BFs so that we have 18 total dynamic BFs $$-$$ 9 for the current state and 9 for the previous state.
 
 For the previous BFs, we use the previous position of the zombies and the current position of the agent.
@@ -108,10 +108,11 @@ Our reasoning is that by keeping track of these states, the agent can see the pr
 
 #### 9 Dynamic Basis Functions with walls
 These BFs are the nearly identical to the original 9 dynamic BFs (figure 2), except we try to incorporate a sense of proximity to the wall in our agent. 
-We do this by modifying our middle BF, _p5_, to add a constant $$0.5$$ if a wall is in it's region. 
-This means that the possible values for this BF is $${0,0.5,1,1.5,2,2.5,3,3.5}$$, instead of $${0,1,2,3}$$.
+We do this by modifying our middle dynamic BF, _p5_, to add a constant $$0.5$$ if a wall is in it's region. 
+This means that the possible values for this BF are $${0,0.5,1,1.5,2,2.5,3,3.5}$$, instead of $${0,1,2,3}$$.
 
 #### 9 Tile Stationary Basis Functions
+
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/basis_stationary1.png" width="350"></div>
 **Figure 3**
 
