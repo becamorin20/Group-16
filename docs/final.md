@@ -97,7 +97,6 @@ They do not keep track of the agents position since the agent is always at the c
 This can be seen in the figure below.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/dynamic_bfs.png" width="600"></div>
 **Figure 2**: Images of 9 dynamic partitions as basis functions. Green spot indicates position of agent. Red spots indicate position of zombies.
-<br><br>
 
 #### 9 Dynamic Basis Functions with previous zombie position
 
@@ -106,33 +105,31 @@ Specifically, we double the number of dynamic BFs so that we have 18 total dynam
 
 For the previous BFs, we use the previous position of the zombies and the current position of the agent.
 Our reasoning is that by keeping track of these states, the agent can see the progression of movement that the zombie makes toward him/her.
-<br><br>
+
 #### 9 Dynamic Basis Functions with walls
 These BFs are the nearly identical to the original 9 dynamic BFs (figure 2), except we try to incorporate a sense of proximity to the wall in our agent. 
 We do this by modifying our middle BF, _p5_, to add a constant $$0.5$$ if a wall is in it's region. 
 This means that the possible values for this BF is $${0,0.5,1,1.5,2,2.5,3,3.5}$$, instead of $${0,1,2,3}$$.
-<br><br>
+
 #### 9 Tile Stationary Basis Functions
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/basis_stationary1.png" width="350"></div>
 **Figure 3**
-<br><br>
+
 #### 9 Coarse Stationary Basis Functions
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/basis_stationary2.png" width="350"></div>
 **Figure 4**
-<br><br>
+
 #### 9 Gaussian Radial Basis Functions (stationary)
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/gaussian_rbf2.png" width="500"></div>
 **Figure 5**
-<br><br>
+
 #### 25 Tile Stationary Basis Functions
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/tile25.png" width="400"></div>
 **Figure 6**
-<br><br>
+
 #### 25 Coarse Stationary Basis Functions
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/coarse25.png" width="400"></div>
 **Figure 7**
-
-<br><br>
 
 ### Algorithm
 We now show the algorithm we use to learn the parameters for our Q-approximation. 
