@@ -146,30 +146,20 @@ We use a 1-dimensional Gaussian function for each region, where the variable is 
 An image and description of our Gaussian RBFs can be seen below:
 
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/gaussian_rbf2.png" width="500"></div>
-**Figure 5**: Image of 9 Gaussian radial basis functions.  
-We use the same centers as we do for the coarse stationary BFs (figure 4). 
-At the center of each BF, that BF will return 1.
-We set our standard deviation to 1.25 unit blocks. 
-We choose this number so that 2 standard deviations is equal to the radius of the coarse circular stationary BFs.
+**Figure 5**: Image of 9 Gaussian radial basis functions. We use the same centers as we do for the coarse stationary BFs (figure 4). At the center of each BF, that BF will return 1. We set our standard deviation to 1.25 unit blocks. We choose this number so that 2 standard deviations is equal to the radius of the coarse circular stationary BFs.
 
 <br><br>
 
 #### 25 Tile Stationary Basis Functions
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/tile25.png" width="400"></div>
-**Figure 6**: Image of 25 tile stationary basis functions. 
-If the agent is in the region of a particular BF, it returns 1, otherwise 0.
-This is an extension of our original attempt at tile BFs in order to see if more granularity in the state represention would produce better results.
+**Figure 6**: Image of 25 tile stationary basis functions. If the agent is in the region of a particular BF, it returns 1, otherwise 0. This is an extension of our original attempt at tile BFs in order to see if more granularity in the state represention would produce better results.
 
 
 <br><br>
 
 #### 25 Coarse Stationary Basis Functions
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/coarse25.png" width="400"></div>
-**Figure 7**: Image of 25 coarse circular stationary basis functions. 
-If the agent is in the region of a particular BF, it returns 1, otherwise 0. 
-The radius of each circle is $$\sqrt{2}$$ unit blocks.
-This is an extension of our original attempt at coarse BFs in order to see if more granularity in the state represention would produce better results.
-
+**Figure 7**: Image of 25 coarse circular stationary basis functions. If the agent is in the region of a particular BF, it returns 1, otherwise 0. The radius of each circle is $$\sqrt{2}$$ unit blocks. This is an extension of our original attempt at coarse BFs in order to see if more granularity in the state represention would produce better results.
 
 <br><br>
 
