@@ -109,7 +109,7 @@ The same as the original 9 dynamic BFs (figure 2), except we also keep track of 
 Specifically, we double the number of dynamic BFs so that we have 18 total dynamic BFs $$-$$ 9 for the current state and 9 for the previous state.
 
 For the previous BFs, we use the previous position of the zombies and the current position of the agent.
-Our reasoning is that by keeping track of these states, the agent can see the progression of movement that the zombie makes toward him/her. This is one advantage for these modifications.
+Our reasoning is that by keeping track of these states, the agent can see the progression of movement that the zombie makes toward him/her. This is one more advantage for our agent.
 
 <br><br>
 
@@ -118,7 +118,7 @@ These BFs are the nearly identical to the original 9 dynamic BFs (figure 2), exc
 We do this by modifying our middle dynamic BF, _p5_, to add a constant $$0.5$$ if a wall is in it's region. 
 This means that the possible values for this BF are $${0,0.5,1,1.5,2,2.5,3,3.5}$$, instead of $${0,1,2,3}$$.
 
-These modifications give our agent an further advantage by letting him know if he is getting too close to a wall and boxing him/her self in.
+These modifications give our agent another advantage by letting him know if he is getting too close to a wall and boxing him/her self in.
 
 <br><br>
 
