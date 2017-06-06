@@ -189,7 +189,7 @@ A full description of the algorithm can be found in Sutton and Barto's _Reinforc
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/alg4.png" width="500"></div>
 **Figure 8**: An online linear, gradient descent Q-learning algorithm for approximating Q(s,a) with eligibility tracing and an $$\epsilon -$$greedy exploration.
 
-Currently, we have our hyperparameters set as $$\lambda=0.9$$, $$\epsilon=0.1$$, and $$\alpha=0.05$$. Over time, both $$\epsilon$$ and $$\alpha$$ gradually decrease over time so that they are set to $$0.001$$ and $$0.0001$$, respectively, by the end of training.
+Currently, we have our hyperparameters set as $$\lambda=0.9$$, $$\epsilon=0.1$$, and $$\alpha=0.05$$. Both $$\epsilon$$ and $$\alpha$$ gradually decrease over time so that they are set to $$0.001$$ and $$0.0001$$, respectively, by the end of training.
 
 <br><br>
 
