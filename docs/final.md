@@ -199,3 +199,9 @@ Currently, we have our hyperparameters set as $$\lambda=0.9$$, $$\epsilon=0.1$$,
 Sutton, Richard and Barto, Andrew. _Reinforcement Learning: An Introduction_. Cambridge, Massachusetts: The MIT Press, 2005. http://incompleteideas.net/sutton/book/ebook/the-book.html. Web. Accessed 1 May 2017.
 
 Busoniu, Lucian, Babuška, Robert, De Schutter, Bart, and Ernst, Damien. _Reinforcement learning and dynamic programming using function approximators_. Boca Raton, Florida: CRC Press, 2010. Print
+
+Malmo Github and Python examples: https://github.com/Microsoft/malmo
+
+Malmo API documentation: https://microsoft.github.io/malmo/0.21.0/Documentation/index.html
+
+All images used in this project were created on the computer of Edison Weik.
