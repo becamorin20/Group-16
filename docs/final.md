@@ -198,4 +198,4 @@ Currently, we have our hyperparameters set as $$\lambda=0.9$$, $$\epsilon=0.1$$,
 ## References
 Sutton, Richard and Barto, Andrew. _Reinforcement Learning: An Introduction_. Cambridge, Massachusetts: The MIT Press, 2005. http://incompleteideas.net/sutton/book/ebook/the-book.html. Web. Accessed 1 May 2017.
 
-Busoniu, Lucian, Babuška, Robert, De Schutter, Bart, and Ernst, Damien. _Reinforcement learning and dynamic programming using function approximators_. Boca Riton, Floraida: CRC Press, 2010. Print
+Busoniu, Lucian, Babuška, Robert, De Schutter, Bart, and Ernst, Damien. _Reinforcement learning and dynamic programming using function approximators_. Boca Raton, Florida: CRC Press, 2010. Print
