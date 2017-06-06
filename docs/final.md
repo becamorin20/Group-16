@@ -128,6 +128,8 @@ We will now examine some the stationary BFs we used. The stationary basis functi
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/basis_stationary2.png" width="350"></div>
 **Figure 4**: Image of 9 coarse circular stationary basis functions. If the agent is in the region of a particular BF, it returns 1, otherwise 0.
 
+<br><br>
+
 #### 9 Gaussian Radial Basis Functions (stationary)
 This set of BFs is new to our project $$-$$ it was not in our status report. From Sutton and Barto:
 
