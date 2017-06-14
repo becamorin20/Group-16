@@ -196,7 +196,9 @@ Currently, we have our hyperparameters set as $$\lambda=0.9$$, $$\epsilon=0.1$$,
 ## Evaluation
 **_How we evaluated our agents_**: To evaluate each agent (both baseline and Q-learner), we ran each agent through 100 episodes five times in order to get an average performance of each agent.
 For each different agent, we show the plots of the performances for each of the five iterations, as well as plot of the cumulative data.
-For the cumulative data plots, we show the average performance of each agent as well as add error bars that show one standard deviation from the line at that point from the five iteration sample.
+For the cumulative data plots, we show the average performance of each agent as well as add error bars that show one standard deviation from the line at that point.
+We calculate the standard deviation at each single point shown using the 5 sample points from the 5 iterations.
+
 _Note_: Unlike the status report, we only evaluate agents in a maze environment. We don't evaluate any agent in a no-maze setting.
 
 ### Baseline - Random moving agent
