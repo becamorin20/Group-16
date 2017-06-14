@@ -215,6 +215,8 @@ _Note_: Unlike the status report, we only evaluate agents in a maze environment.
 
 ### Q-Approximation - 9 Dynamic BFs + 25 Coarse stationary BFs
 
+### Comparison of all agents
+
 ## References
 Sutton, Richard and Barto, Andrew. [Reinforcement Learning: An Introduction](http://incompleteideas.net/sutton/book/ebook/the-book.html)
 
