@@ -200,7 +200,7 @@ For the cumulative data plots, we show the average performance of each agent as 
 Note: Unlike the status report, we only evaluate agents in a maze environment. We don't evaluate any agent in a no-maze setting.
 
 ### Baseline - Random moving agent
-<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/random_maze_final.png" width="500"></div>
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/random_final.png" width="500"></div>
 **Figure 9**: On average, the randomly moving agent survives for $$~50$$ time steps in the maze.
 
 ### Baseline - Handcode agent (mob fun algorithm)
