@@ -187,7 +187,7 @@ First, we show that we approximate our Q-function with a parametric approximator
 We try many different types of basis functions:
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/phi.png" width="600"></div>
 and consequently learn many different sets of parameters:
-<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/theta_final.png" width="600"></div>.
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/theta_final.png" width="400"></div>.
 For each evaluation, we'll specify how many BFs and parameters we use.
 
 <br><br>
