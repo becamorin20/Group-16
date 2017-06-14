@@ -103,16 +103,6 @@ This can be seen in the figure below.
 
 <br><br>
 
-#### 9 Dynamic Basis Functions with previous zombie position
-
-The same as the original 9 dynamic BFs (figure 2), except we also keep track of the previous state of each zombie. 
-Specifically, we double the number of dynamic BFs so that we have 18 total dynamic BFs $$-$$ 9 for the current state and 9 for the previous state.
-
-For the previous BFs, we use the previous position of the zombies and the current position of the agent.
-Our reasoning is that by keeping track of these states, the agent can see the progression of movement that the zombie makes toward him/her. This is one more advantage for our agent.
-
-<br><br>
-
 #### 9 Dynamic Basis Functions with walls
 These BFs are the nearly identical to the original 9 dynamic BFs (figure 2), except we try to incorporate a sense of proximity to the wall in our agent. 
 We do this by modifying our middle dynamic BF, _p5_, to add a constant $$0.5$$ if a wall is in it's region. 
@@ -190,8 +180,6 @@ and consequently learn many different sets of parameters:
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/theta_final.png" width="400"></div>.
 For each evaluation, we'll specify how many BFs and parameters we use.
 
-<br><br>
-
 Our algorithm learns the parameters $$\theta$$ for our Q-approximator. 
 A full description of the algorithm can be found in Sutton and Barto's _Reinforcement Learning: An Introduction_, Chapter 8. 
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/alg4.png" width="500"></div>
@@ -220,6 +208,10 @@ _Note_: Unlike the status report, we only evaluate agents in a maze environment.
 ### Q-Approximation - 9 Dynamic BFs + 9 Tile stationary BFs
 
 ### Q-Approximation - 9 Dynamic BFs + 9 Coarse stationary BFs
+
+### Q-Approximation - 9 Dynamic BFs + 25 Gaussian stationary RBFs
+
+### Q-Approximation - 9 Dynamic BFs + 25 Coarse stationary BFs
 
 ### Q-Approximation - 9 Dynamic BFs + 25 Coarse stationary BFs
 
