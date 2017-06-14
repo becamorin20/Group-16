@@ -184,6 +184,14 @@ Now that we've seen the many different BFs used - we'll look at the algorithm we
 First, we show that we approximate our Q-function with a parametric approximator:
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/q_function.png" width="300"></div>
 
+We try many different types of basis functions:
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/phi.png" width="600"></div>
+and consequently learn many different sets of parameters:
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/theta_final.png" width="600"></div>.
+For each evaluation, we'll specify how many BFs and parameters we use.
+
+<br><br>
+
 Our algorithm learns the parameters $$\theta$$ for our Q-approximator. 
 A full description of the algorithm can be found in Sutton and Barto's _Reinforcement Learning: An Introduction_, Chapter 8. 
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/alg4.png" width="500"></div>
@@ -209,6 +217,11 @@ _Note_: Unlike the status report, we only evaluate agents in a maze environment.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/handode_maze_final.png" width="600"></div>
 **Figure 10**: On average, the agent moving according to the mob fun algorithm survives for $$\sim115$$ time steps in the maze.
 
+### Q-Approximation - 9 Dynamic BFs + 9 Tile stationary BFs
+
+### Q-Approximation - 9 Dynamic BFs + 9 Coarse stationary BFs
+
+### Q-Approximation - 9 Dynamic BFs + 25 Coarse stationary BFs
 
 ## References
 Sutton, Richard and Barto, Andrew. [Reinforcement Learning: An Introduction](http://incompleteideas.net/sutton/book/ebook/the-book.html)
