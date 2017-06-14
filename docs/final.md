@@ -194,14 +194,27 @@ Currently, we have our hyperparameters set as $$\lambda=0.9$$, $$\epsilon=0.1$$,
 <br><br>
 
 ## Evaluation
+**_How we evaluated our agents_**: To evaluate each agent (both baseline and Q-learner), we ran each agent through 100 episodes five times in order to get an average performance of each agent.
+For each different agent, we show the plots of the performances for each of the five iterations, as well as plot of the cumulative data.
+For the cumulative data plots, we show the average performance of each agent as well as add error bars that show one standard deviation from the line at that point from the five iteration sample.
+Note: Unlike the status report, we only evaluate agents in a maze environment. We don't evaluate any agent in a no-maze setting.
+
+### Baseline - Random moving agent
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/random_maze_final.png" width="500"></div>
+**Figure 9**: On average, the randomly moving agent survives for $$~50$$ time steps in the maze.
+
+### Baseline - Handcode agent (mob fun algorithm)
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/handcode_maze_final.png" width="500"></div>
+**Figure 10**: On average, the agent moving according to the mob fun algorithm survives for $$~115$$ time steps in the maze.
+
 
 ## References
-Sutton, Richard and Barto, Andrew. _Reinforcement Learning: An Introduction_. Cambridge, Massachusetts: The MIT Press, 2005. http://incompleteideas.net/sutton/book/ebook/the-book.html. Web. Accessed 1 May 2017.
+Sutton, Richard and Barto, Andrew. [Reinforcement Learning: An Introduction](http://incompleteideas.net/sutton/book/ebook/the-book.html)
 
 Busoniu, Lucian, Babuška, Robert, De Schutter, Bart, and Ernst, Damien. _Reinforcement learning and dynamic programming using function approximators_. Boca Raton, Florida: CRC Press, 2010. Print
 
-Malmo Github and Python examples: https://github.com/Microsoft/malmo
+[Malmo Github](https://github.com/Microsoft/malmo)
 
-Malmo API documentation: https://microsoft.github.io/malmo/0.21.0/Documentation/index.html
+[Malmo API documentation](https://microsoft.github.io/malmo/0.21.0/Documentation/index.html)
 
 All images used in this project were created on the computer of Edison Weik.
