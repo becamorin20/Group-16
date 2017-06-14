@@ -97,18 +97,14 @@ They return an integer indicating how many zombies are in that particular region
 Possible values include $${0,1,2,3}$$.
 This allows our agent to know the general position of each zombie relative to him/her. 
 They do not keep track of the agents position since the agent is always at the center.
+
+We also modify out middly dynamic BF, _p5_, to add a constant $$0.5$$ if a wall is in it's region. 
+This means that the possible values for this BF are $${0,0.5,1,1.5,2,2.5,3,3.5}$$, instead of $${0,1,2,3}$$.
+These modifications give our agent another advantage by letting him know if he is getting too close to a wall and boxing him/her self in.
+
 This can be seen in the figure below.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/dynamic_bfs.png" width="600"></div>
 **Figure 2**: Images of 9 dynamic partitions as basis functions. Green spot indicates position of agent. Red spots indicate position of zombies.
-
-<br><br>
-
-#### 9 Dynamic Basis Functions with walls
-These BFs are the nearly identical to the original 9 dynamic BFs (figure 2), except we try to incorporate a sense of proximity to the wall in our agent. 
-We do this by modifying our middle dynamic BF, _p5_, to add a constant $$0.5$$ if a wall is in it's region. 
-This means that the possible values for this BF are $${0,0.5,1,1.5,2,2.5,3,3.5}$$, instead of $${0,1,2,3}$$.
-
-These modifications give our agent another advantage by letting him know if he is getting too close to a wall and boxing him/her self in.
 
 <br><br>
 
