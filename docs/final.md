@@ -177,6 +177,8 @@ and learn many different sets of parameters:
 For each evaluation, we'll specify how many BFs and parameters we use.
 
 Our algorithm learns the parameters $$\theta$$ for our Q-approximator. 
+Notice that we use an eligibility trace vector instead of just the gradient. 
+This allows us to incorporate a sense of backtracking when updating states so that when we do reach the terminal state, previous states are also updated in proportion to the how far it's been since they were visited.
 A full description of the algorithm can be found in Sutton and Barto's _Reinforcement Learning: An Introduction_, Chapter 8. 
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/alg4.png" width="500"></div>
 **Figure 8**: An online linear, gradient descent Q-learning algorithm for approximating Q(s,a) with eligibility tracing and an $$\epsilon -$$greedy exploration.
@@ -212,6 +214,10 @@ _Note_: Unlike the status report, we only evaluate agents in a maze environment.
 ### Q-Approximation - 9 Dynamic BFs + 25 Coarse stationary BFs
 
 ### Comparison of all agents
+
+<br><br>
+
+## Conclusion
 
 ## References
 Sutton, Richard and Barto, Andrew. [Reinforcement Learning: An Introduction](http://incompleteideas.net/sutton/book/ebook/the-book.html)
