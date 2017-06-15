@@ -191,7 +191,8 @@ Currently, we have our hyperparameters set as $$\lambda=0.9$$, $$\epsilon=0.1$$,
 **_How we evaluated our agents_**: To evaluate each agent (both baseline and Q-learner), we ran each agent through 100 episodes five times in order to get an average performance of each agent.
 For each different agent, we show the plots of the performances for each of the five iterations, as well as plot of the cumulative data.
 For the cumulative data plots, we show the average performance of each agent as well as add error bars that show one standard deviation from the line at that point.
-We calculate the standard deviation at each single point shown using the 5 sample points from the 5 iterations.
+We calculate the standard deviation at each point shown using the sample points near that point (using numpy).
+Note that the standard deviation shown is not centered at the mean of the points from which it was sampled - it is centered at the point on the linear fit - so it may look off.
 
 _Note_: Unlike the status report, we only evaluate agents in a maze environment. We don't evaluate any agent in a no-maze setting.
 
@@ -207,7 +208,7 @@ _Note_: Unlike the status report, we only evaluate agents in a maze environment.
 For this agent, we used 18 total basis functions for each action: 9 dynamic BFs (figure 2) and 9 tile stationary BFs (figure 3). 
 In total, for this agent we used 72 BFs and 72 parameters.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/9tile_final.png" width="600"></div>
-**Figure 11**: On average, this agent survived for approximately $$87$$ time steps.
+**Figure 11**: On average, this agent survived for approximately $$87$$ time steps. There also appears to be a lot more variation in the error bars here than in the baseline (this is present in all of our learners).
 
 ### Q-Approximation - 9 Dynamic BFs + 9 Coarse stationary BFs
 
