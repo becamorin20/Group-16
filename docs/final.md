@@ -243,7 +243,7 @@ In total, for this agent we used 136 BFs and 136 parameters.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/25coarse_final.png" width="600"></div>
 **Figure 15**: On average, this agent survived for approximately $$136$$ time steps with a lot of variation.
 
-### Average performance of all agents
+### Comparison of all agents
 We now compare the average performances of all the agents
 
 Random: average$$=49.744$$, std deviation$$=16.272$$
@@ -263,7 +263,11 @@ Handcode: average$$=114.408$$, std deviation$$=30.580$$
 <br><br>
 
 ## Conclusion
-In conclusion, 
+In conclusion, while the average performance of only one agent exceeds that of the handcoded agent, the variance is too large to conclude that our agent ultimately performs better.
+All of our agents exhibited a lot of variation across training, and we cannot confidently show any great positive results from our agent.
+When we started this project, we set out to have our survive as long as possible in a maze with 3 zombies.
+The idea was the agent would learn how to avoid zombies by using the maze to its advantage.
+At the end of the quarter, we regretfully say our agent did not accomplish this goal.
 
 ## References
 Sutton, Richard and Barto, Andrew. [Reinforcement Learning: An Introduction](http://incompleteideas.net/sutton/book/ebook/the-book.html)
