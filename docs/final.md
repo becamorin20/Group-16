@@ -153,13 +153,22 @@ An image and description of our Gaussian RBFs can be seen below:
 #### 25 Tile Stationary Basis Functions
 We will now see extensions of previous BFs we tried. 
 These next sets of BFs are designed to smaller and more granular and have the advantage of being more precise in letting the agent know where he/she is. 
-A possible disadvantage is the extra computation involved, which could slow the agent down and cause him to be killed faster.
+
+Some disadvantages these BFs may have is the extra computation involved and the problem of exploring all the possible states sufficiently.
+With more basis functions, it becomes harder to explore every single state multiple times to get good experience, especially since we only train for 100 iterations. 
+This brings us to the time problem. 
+We couldn't train all of our agents for more than 100 iterations due to the time it took. 
+Training 100 iterations with the maze took on average 1 hour.
+Training 100 iterations 5 times for each agent would take about 5 hours per agent. 
+This was a big constraint which we were not able to resolve.
+
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/tile25.png" width="400"></div>
 **Figure 6**: Image of 25 tile stationary basis functions. If the agent is in the region of a particular BF, it returns 1, otherwise 0. This is an extension of our original attempt at tile BFs in order to see if more granularity in the state represention would produce better results.
 
 <br><br>
 
 #### 25 Coarse Stationary Basis Functions
+This has the same advantages and disadvantes as the 25 tile BFs.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/coarse25.png" width="400"></div>
 **Figure 7**: Image of 25 coarse circular stationary basis functions. If the agent is in the region of a particular BF, it returns 1, otherwise 0. The radius of each circle is $$\sqrt{2}$$ unit blocks. This is an extension of our original attempt at coarse BFs in order to see if more granularity in the state represention would produce better results.
 
@@ -211,28 +220,50 @@ In total, for this agent we used 72 BFs and 72 parameters.
 **Figure 11**: On average, this agent survived for approximately $$87$$ time steps. There also appears to be a lot more variation in the error bars here than in the baseline (this is present in all of our learners).
 
 ### Q-Approximation - 9 Dynamic BFs + 9 Coarse stationary BFs
+For this agent, we used 18 total basis functions for each action: 9 dynamic BFs (figure 2) and 9 Gaussian stationary BFs (figure 4). 
+In total, for this agent we used 72 BFs and 72 parameters.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/9coarse_final.png" width="600"></div>
-**Figure 12**
+**Figure 12**:  On average, this agent survived for approximately $$90$$ time steps with a lot of variation.
 
 ### Q-Approximation - 9 Dynamic BFs + 9 Gaussian stationary RBFs
+For this agent, we used 18 total basis functions for each action: 9 dynamic BFs (figure 2) and 9 Gaussian stationary BFs (figure 5). 
+In total, for this agent we used 72 BFs and 72 parameters.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/9gaussian_final.png" width="600"></div>
-**Figure 13**
+**Figure 13**: On average, this agent survived for approximately $$109$$ time steps with a lot of variation.
 
 ### Q-Approximation - 9 Dynamic BFs + 25 Tile stationary BFs
-For this agent, we used 18 total basis functions for each action: 9 dynamic BFs (figure 2) and 25 tile stationary BFs (figure 6). 
+For this agent, we used 34 total basis functions for each action: 9 dynamic BFs (figure 2) and 25 tile stationary BFs (figure 6). 
 In total, for this agent we used 136 BFs and 136 parameters.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/25tile_final.png" width="600"></div>
 **Figure 14**: On average, this agent survived for approximately $$76$$ time steps.
 
 ### Q-Approximation - 9 Dynamic BFs + 25 Coarse stationary BFs
+For this agent, we used 34 total basis functions for each action: 9 dynamic BFs (figure 2) and 25 tile stationary BFs (figure 7). 
+In total, for this agent we used 136 BFs and 136 parameters.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/25coarse_final.png" width="600"></div>
-**Figure 15**
+**Figure 15**: On average, this agent survived for approximately $$136$$ time steps with a lot of variation.
 
-### Comparison of all agents
+### Average performance of all agents
+We now compare the average performances of all the agents
+
+Random: average$$=49.744$$, std deviation$$=16.272$$
+
+Handcode: average$$=114.408$$, std deviation$$=30.580$$
+
+9 Tile: average$$=87.036$, std deviation$$=36.904$$
+
+9 Coarse: average$$=90.16$$, std deviation$$=35.115$$
+
+9 Gaussian: average$$=109.484$$, std deviation$$=48.092$$
+
+25 Tile: average$$=76.74$$, std deviation$$=28.771$$
+
+25 Coarse: average$$=136.524$$, std deviation$$=44.198$$
 
 <br><br>
 
 ## Conclusion
+In conclusion, 
 
 ## References
 Sutton, Richard and Barto, Andrew. [Reinforcement Learning: An Introduction](http://incompleteideas.net/sutton/book/ebook/the-book.html)
