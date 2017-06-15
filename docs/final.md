@@ -254,7 +254,7 @@ Handcode: average$$=114.408$$, std deviation$$=30.580$$
 
 9 Coarse: average$$=90.16$$, std deviation$$=35.115$$
 
-9 Gaussian: average$$=109.484$$, std deviation$$=48.092$$
+9 Gaussian: average$$=109.484$$, std deviation$$=53.092$$
 
 25 Tile: average$$=76.74$$, std deviation$$=28.771$$
 
