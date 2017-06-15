@@ -250,7 +250,7 @@ Random: average$$=49.744$$, std deviation$$=16.272$$
 
 Handcode: average$$=114.408$$, std deviation$$=30.580$$
 
-9 Tile: average$$=87.036$, std deviation$$=36.904$$
+9 Tile: average$$=87.036$$, std deviation$$=36.904$$
 
 9 Coarse: average$$=90.16$$, std deviation$$=35.115$$
 
