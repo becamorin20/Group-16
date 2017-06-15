@@ -211,8 +211,12 @@ In total, for this agent we used 72 BFs and 72 parameters.
 **Figure 11**: On average, this agent survived for approximately $$87$$ time steps. There also appears to be a lot more variation in the error bars here than in the baseline (this is present in all of our learners).
 
 ### Q-Approximation - 9 Dynamic BFs + 9 Coarse stationary BFs
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/9coarse_final.png" width="600"></div>
+**Figure 12**
 
-### Q-Approximation - 9 Dynamic BFs + 25 Gaussian stationary RBFs
+### Q-Approximation - 9 Dynamic BFs + 9 Gaussian stationary RBFs
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/9gaussian_final.png" width="600"></div>
+**Figure 13**
 
 ### Q-Approximation - 9 Dynamic BFs + 25 Tile stationary BFs
 For this agent, we used 18 total basis functions for each action: 9 dynamic BFs (figure 2) and 25 tile stationary BFs (figure 6). 
@@ -221,6 +225,8 @@ In total, for this agent we used 136 BFs and 136 parameters.
 **Figure 14**: On average, this agent survived for approximately $$76$$ time steps.
 
 ### Q-Approximation - 9 Dynamic BFs + 25 Coarse stationary BFs
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/25coarse_final.png" width="600"></div>
+**Figure 15**
 
 ### Comparison of all agents
 
