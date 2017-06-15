@@ -204,12 +204,20 @@ _Note_: Unlike the status report, we only evaluate agents in a maze environment.
 **Figure 10**: On average, the agent moving according to the mob fun algorithm survives for $$\sim115$$ time steps in the maze.
 
 ### Q-Approximation - 9 Dynamic BFs + 9 Tile stationary BFs
+For this agent, we used 18 total basis functions for each action: 9 dynamic BFs (figure 2) and 9 tile stationary BFs (figure 3). 
+In total, for this agent we used 72 BFs and 72 parameters.
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/9tile_final.png" width="600"></div>
+**Figure 11**: On average, this agent survived for approximately $$87$$ time steps.
 
 ### Q-Approximation - 9 Dynamic BFs + 9 Coarse stationary BFs
 
 ### Q-Approximation - 9 Dynamic BFs + 25 Gaussian stationary RBFs
 
-### Q-Approximation - 9 Dynamic BFs + 25 Coarse stationary BFs
+### Q-Approximation - 9 Dynamic BFs + 25 Tile stationary BFs
+For this agent, we used 18 total basis functions for each action: 9 dynamic BFs (figure 2) and 25 tile stationary BFs (figure 6). 
+In total, for this agent we used 136 BFs and 136 parameters.
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/25tile_final.png" width="600"></div>
+**Figure 14**: On average, this agent survived for approximately $$76$$ time steps.
 
 ### Q-Approximation - 9 Dynamic BFs + 25 Coarse stationary BFs
 
