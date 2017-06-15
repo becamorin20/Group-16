@@ -161,6 +161,7 @@ This brings us to the time problem.
 We couldn't train all of our agents for more than 100 iterations due to the time it took. 
 Training 100 iterations with the maze took on average 1 hour.
 Training 100 iterations 5 times for each agent would take about 5 hours per agent. 
+(You'll see why we did it 5 times in the evaluation.)
 This was a big constraint which we were not able to resolve.
 
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/tile25.png" width="400"></div>
