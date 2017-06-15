@@ -265,8 +265,8 @@ Handcode: average$$=114.408$$, std deviation$$=30.580$$
 ## Conclusion
 In conclusion, while the average performance of only one agent exceeds that of the handcoded agent, the variance is too large to conclude that our agent ultimately performs better.
 All of our agents exhibited a lot of variation across training, and we cannot confidently show any great positive results from our agent.
-When we started this project, we set out to have our survive as long as possible in a maze with 3 zombies.
-The idea was the agent would learn how to avoid zombies by using the maze to its advantage.
+When we started this project, we set out to have our agent survive as long as possible in a maze with 3 zombies.
+The idea was that the agent would learn how to avoid zombies by using the maze to its advantage to hide from zombies.
 At the end of the quarter, we regretfully say our agent did not accomplish this goal.
 
 ## References
