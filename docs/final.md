@@ -204,7 +204,7 @@ For each different agent, we show the plots of the performances for each of the 
 For the cumulative data plots, we show the average performance of each agent as well as add error bars that show one standard deviation from the line at that point.
 We calculate the standard deviation at each point shown using the sample points near that point (using numpy).
 
-_Note 1_: that the standard deviation shown is not centered at the mean of the points from which it was sampled - it is centered at the point on the linear fit - so it may look off.
+_Note 1_: The standard deviation shown is not centered at the mean of the points from which it was sampled - it is centered at the point on the linear fit - so it may look off.
 
 _Note 2_: Unlike the status report, we only evaluate agents in a maze environment. We don't evaluate any agent in a no-maze setting.
 
