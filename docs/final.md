@@ -203,9 +203,10 @@ Currently, we have our hyperparameters set as $$\lambda=0.9$$, $$\epsilon=0.1$$,
 For each different agent, we show the plots of the performances for each of the five iterations, as well as plot of the cumulative data.
 For the cumulative data plots, we show the average performance of each agent as well as add error bars that show one standard deviation from the line at that point.
 We calculate the standard deviation at each point shown using the sample points near that point (using numpy).
-Note that the standard deviation shown is not centered at the mean of the points from which it was sampled - it is centered at the point on the linear fit - so it may look off.
 
-_Note_: Unlike the status report, we only evaluate agents in a maze environment. We don't evaluate any agent in a no-maze setting.
+_Note 1_: that the standard deviation shown is not centered at the mean of the points from which it was sampled - it is centered at the point on the linear fit - so it may look off.
+
+_Note 2_: Unlike the status report, we only evaluate agents in a maze environment. We don't evaluate any agent in a no-maze setting.
 
 ### Baseline - Random moving agent
 Here are plots from running a random moving agent.
@@ -245,7 +246,7 @@ In total, for this agent we used 136 BFs and 136 parameters.
 For this agent, we used 34 total basis functions for each action: 9 dynamic BFs (figure 2) and 25 tile stationary BFs (figure 7). 
 In total, for this agent we used 136 BFs and 136 parameters.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/25coarse_final.png" width="600"></div>
-**Figure 15**: On average, this agent survived for approximately $$136$$ time steps with a lot of variation. The standard deviation in this agent's time steps is $$118$$.
+**Figure 15**: On average, this agent survived for approximately $$136$$ time steps with a lot of variation. The standard deviation in this agent's time steps is $$128$$.
 
 ### Comparison of all agents
 We now compare the average performances of all the agents
