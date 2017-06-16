@@ -208,68 +208,75 @@ Note that the standard deviation shown is not centered at the mean of the points
 _Note_: Unlike the status report, we only evaluate agents in a maze environment. We don't evaluate any agent in a no-maze setting.
 
 ### Baseline - Random moving agent
+Here are plots from running a random moving agent.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/random_final.png" width="600"></div>
-**Figure 9**: On average, the randomly moving agent survives for $$\sim50$$ time steps in the maze.
+**Figure 9**: On average, the randomly moving agent survives for $$\sim50$$ time steps in the maze. The standard deviation in this agent's time steps is $$19$$.
 
 ### Baseline - Handcode agent (mob fun algorithm)
+Here are plots from running a hancoded agent moving according to the mob fun algorithm.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/handode_maze_final.png" width="600"></div>
-**Figure 10**: On average, the agent moving according to the mob fun algorithm survives for $$\sim115$$ time steps in the maze.
+**Figure 10**: On average, the agent moving according to the mob fun algorithm survives for $$\sim115$$ time steps in the maze. The standard deviation in this agent's time steps is $$51$$.
 
 ### Q-Approximation - 9 Dynamic BFs + 9 Tile stationary BFs
 For this agent, we used 18 total basis functions for each action: 9 dynamic BFs (figure 2) and 9 tile stationary BFs (figure 3). 
 In total, for this agent we used 72 BFs and 72 parameters.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/9tile_final.png" width="600"></div>
-**Figure 11**: On average, this agent survived for approximately $$87$$ time steps. There also appears to be a lot more variation in the error bars here than in the baseline (this is present in all of our learners).
+**Figure 11**: On average, this agent survived for approximately $$87$$ time steps. The standard deviation in this agent's time steps is $$=45$$.
 
 ### Q-Approximation - 9 Dynamic BFs + 9 Coarse stationary BFs
 For this agent, we used 18 total basis functions for each action: 9 dynamic BFs (figure 2) and 9 Gaussian stationary BFs (figure 4). 
 In total, for this agent we used 72 BFs and 72 parameters.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/9coarse_final.png" width="600"></div>
-**Figure 12**:  On average, this agent survived for approximately $$90$$ time steps with a lot of variation.
+**Figure 12**:  On average, this agent survived for approximately $$90$$ time steps with a lot of variation. The standard deviation in this agent's time steps is $$=41$$.
 
 ### Q-Approximation - 9 Dynamic BFs + 9 Gaussian stationary RBFs
 For this agent, we used 18 total basis functions for each action: 9 dynamic BFs (figure 2) and 9 Gaussian stationary BFs (figure 5). 
 In total, for this agent we used 72 BFs and 72 parameters.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/9gaussian_final.png" width="600"></div>
-**Figure 13**: On average, this agent survived for approximately $$109$$ time steps with a lot of variation.
+**Figure 13**: On average, this agent survived for approximately $$109$$ time steps with a lot of variation. The standard deviation in this agent's time steps is $$=69$$.
 
 ### Q-Approximation - 9 Dynamic BFs + 25 Tile stationary BFs
 For this agent, we used 34 total basis functions for each action: 9 dynamic BFs (figure 2) and 25 tile stationary BFs (figure 6). 
 In total, for this agent we used 136 BFs and 136 parameters.
-<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/25tile_final.png" width="600"></div>
-**Figure 14**: On average, this agent survived for approximately $$76$$ time steps.
+<div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/25tile_final2.png" width="600"></div>
+**Figure 14**: On average, this agent survived for approximately $$120$$ time steps. The standard deviation in this agent's time steps is $$=150$$. (This was the only graph where I thought to add the standard deviation to the legend in the plot. It was too late to add them to the other plots.)
 
 ### Q-Approximation - 9 Dynamic BFs + 25 Coarse stationary BFs
 For this agent, we used 34 total basis functions for each action: 9 dynamic BFs (figure 2) and 25 tile stationary BFs (figure 7). 
 In total, for this agent we used 136 BFs and 136 parameters.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/25coarse_final.png" width="600"></div>
-**Figure 15**: On average, this agent survived for approximately $$136$$ time steps with a lot of variation.
+**Figure 15**: On average, this agent survived for approximately $$136$$ time steps with a lot of variation. The standard deviation in this agent's time steps is $$=118$$.
 
 ### Comparison of all agents
 We now compare the average performances of all the agents
 
-Random: average$$=49.744$$, std deviation$$=16.272$$
+Random: average$$=49.744$$, std deviation$$=19.272$$
 
-Handcode: average$$=114.408$$, std deviation$$=30.580$$
+Handcode: average$$=114.408$$, std deviation$$=51.580$$
 
-9 Tile: average$$=87.036$$, std deviation$$=36.904$$
+9 Tile: average$$=87.036$$, std deviation$$=45.904$$
 
-9 Coarse: average$$=90.16$$, std deviation$$=35.115$$
+9 Coarse: average$$=90.16$$, std deviation$$=40.564$$
 
-9 Gaussian: average$$=109.484$$, std deviation$$=53.092$$
+9 Gaussian: average$$=109.484$$, std deviation$$=69.092$$
 
-25 Tile: average$$=76.74$$, std deviation$$=28.771$$
+25 Tile: average$$=120.144$$, std deviation$$=150.217$$
 
-25 Coarse: average$$=136.524$$, std deviation$$=44.198$$
+25 Coarse: average$$=136.524$$, std deviation$$=118.198$$
+
+### Concluding remarks
+In conclusion, while the average performance of only one agent exceeds that of the handcoded agent, the variance is too large to conclude that any agent ultimately performs better than the mob fun agent.
+All of our agents exhibited a lot of variation across training, and we cannot confidently show any great positive results from our project.
+
+When we started this project, we set out to have our agent survive as long as possible in a maze with 3 zombies.
+While we never defined a terminal state other than death (such as a formal time expiration), we hoped that our agent would be able to considerably outperform the mob fun agent.
+The idea was that the agent would learn how to avoid zombies by using the maze to its advantage to hide from zombies.
+
+Our agent did learn to act near the same level of performance as the mob fun agent, which we think is a pretty good accomplishment.
+But at the end of the quarter, we regretfully say our agent did not accomplish our ultimate goal.
+Thank you for reading our report.
 
 <br><br>
-
-## Conclusion
-In conclusion, while the average performance of only one agent exceeds that of the handcoded agent, the variance is too large to conclude that our agent ultimately performs better.
-All of our agents exhibited a lot of variation across training, and we cannot confidently show any great positive results from our agent.
-When we started this project, we set out to have our agent survive as long as possible in a maze with 3 zombies.
-The idea was that the agent would learn how to avoid zombies by using the maze to its advantage to hide from zombies.
-At the end of the quarter, we regretfully say our agent did not accomplish this goal.
 
 ## References
 Sutton, Richard and Barto, Andrew. [Reinforcement Learning: An Introduction](http://incompleteideas.net/sutton/book/ebook/the-book.html)
