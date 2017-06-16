@@ -239,6 +239,8 @@ In total, for this agent we used 72 BFs and 72 parameters.
 ### Q-Approximation - 9 Dynamic BFs + 25 Tile stationary BFs
 For this agent, we used 34 total basis functions for each action: 9 dynamic BFs (figure 2) and 25 tile stationary BFs (figure 6). 
 In total, for this agent we used 136 BFs and 136 parameters.
+
+Qualitatively, these next two agents are able to perform better by maneuvering through the maze more intelligently. That's to be expected though since we have better granularity with more BFs. 
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/25tile_final2.png" width="600"></div>
 **Figure 14**: On average, this agent survived for approximately $$120$$ time steps. The standard deviation in this agent's time steps is $$150$$. (This was the only graph where I thought to add the standard deviation to the legend in the plot. It was too late to add them to the other plots.)
 
