@@ -266,8 +266,8 @@ Handcode: average$$=114.408$$, std deviation$$=51.580$$
 25 Coarse: average$$=136.524$$, std deviation$$=118.198$$
 
 ### Concluding remarks
-In conclusion, while the average performance of only one agent exceeds that of the handcoded agent, the variance is too large to conclude that any agent ultimately performs better than the mob fun agent.
-All of our agents exhibited a lot of variation across training, and we cannot confidently show any great positive results from our project.
+In conclusion, while the average performance of only two agents exceed that of the handcoded agent, the variance is too large to conclude that _any_ agent ultimately performed better than the mob fun agent.
+All of our agents exhibited a lot of variation across training, and we cannot confidently show any conclusively positive results from our project.
 
 When we started this project, we set out to have our agent survive as long as possible in a maze with 3 zombies.
 While we never defined a terminal state other than death (such as a formal time expiration), we hoped that our agent would be able to considerably outperform the mob fun agent.
