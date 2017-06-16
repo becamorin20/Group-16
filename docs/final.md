@@ -221,31 +221,31 @@ Here are plots from running a hancoded agent moving according to the mob fun alg
 For this agent, we used 18 total basis functions for each action: 9 dynamic BFs (figure 2) and 9 tile stationary BFs (figure 3). 
 In total, for this agent we used 72 BFs and 72 parameters.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/9tile_final.png" width="600"></div>
-**Figure 11**: On average, this agent survived for approximately $$87$$ time steps. The standard deviation in this agent's time steps is $$=45$$.
+**Figure 11**: On average, this agent survived for approximately $$87$$ time steps. The standard deviation in this agent's time steps is $$45$$.
 
 ### Q-Approximation - 9 Dynamic BFs + 9 Coarse stationary BFs
 For this agent, we used 18 total basis functions for each action: 9 dynamic BFs (figure 2) and 9 Gaussian stationary BFs (figure 4). 
 In total, for this agent we used 72 BFs and 72 parameters.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/9coarse_final.png" width="600"></div>
-**Figure 12**:  On average, this agent survived for approximately $$90$$ time steps with a lot of variation. The standard deviation in this agent's time steps is $$=41$$.
+**Figure 12**:  On average, this agent survived for approximately $$90$$ time steps with a lot of variation. The standard deviation in this agent's time steps is $$41$$.
 
 ### Q-Approximation - 9 Dynamic BFs + 9 Gaussian stationary RBFs
 For this agent, we used 18 total basis functions for each action: 9 dynamic BFs (figure 2) and 9 Gaussian stationary BFs (figure 5). 
 In total, for this agent we used 72 BFs and 72 parameters.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/9gaussian_final.png" width="600"></div>
-**Figure 13**: On average, this agent survived for approximately $$109$$ time steps with a lot of variation. The standard deviation in this agent's time steps is $$=69$$.
+**Figure 13**: On average, this agent survived for approximately $$109$$ time steps with a lot of variation. The standard deviation in this agent's time steps is $$69$$.
 
 ### Q-Approximation - 9 Dynamic BFs + 25 Tile stationary BFs
 For this agent, we used 34 total basis functions for each action: 9 dynamic BFs (figure 2) and 25 tile stationary BFs (figure 6). 
 In total, for this agent we used 136 BFs and 136 parameters.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/25tile_final2.png" width="600"></div>
-**Figure 14**: On average, this agent survived for approximately $$120$$ time steps. The standard deviation in this agent's time steps is $$=150$$. (This was the only graph where I thought to add the standard deviation to the legend in the plot. It was too late to add them to the other plots.)
+**Figure 14**: On average, this agent survived for approximately $$120$$ time steps. The standard deviation in this agent's time steps is $$150$$. (This was the only graph where I thought to add the standard deviation to the legend in the plot. It was too late to add them to the other plots.)
 
 ### Q-Approximation - 9 Dynamic BFs + 25 Coarse stationary BFs
 For this agent, we used 34 total basis functions for each action: 9 dynamic BFs (figure 2) and 25 tile stationary BFs (figure 7). 
 In total, for this agent we used 136 BFs and 136 parameters.
 <div align="center"><img src="//raw.githubusercontent.com/becamorin20/Zombie-Maze-Land/master/docs/images/25coarse_final.png" width="600"></div>
-**Figure 15**: On average, this agent survived for approximately $$136$$ time steps with a lot of variation. The standard deviation in this agent's time steps is $$=118$$.
+**Figure 15**: On average, this agent survived for approximately $$136$$ time steps with a lot of variation. The standard deviation in this agent's time steps is $$118$$.
 
 ### Comparison of all agents
 We now compare the average performances of all the agents
